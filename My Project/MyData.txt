@@ -1,0 +1,48 @@
+
+insert into answer values(101,'sdsgf','math');
+insert into answer values(102,'sdsgf','math');
+insert into answer values(103,'sdsgf','math');
+insert into answer values(104,'sdsgf','math');
+
+
+insert into assignment values(101,'hello','math','2006-03-12');
+insert into assignment values(102,'hello','math','2006-03-12');
+insert into assignment values(103,'hello','math','2006-03-12');
+insert into assignment values(104,'hello','math','2006-03-12');
+
+
+
+
+insert into project values(101,'hello','cse','2006-03-12');
+insert into project values(102,'hello','cse','2006-03-12');
+insert into project values(103,'hello','cse','2006-03-12');
+insert into project values(104,'hello','cse','2006-03-12');
+
+
+
+
+insert into question values(101,'hello','cse');
+insert into question values(102,'hello','cse');
+insert into question values(103,'hello','cse');
+insert into question values(104,'hello','cse');
+
+
+insert into student values(101,'Sakim','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
+insert into student values(102,'Kamal','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
+insert into student values(103,'Rofiq','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
+insert into student values(104,'Jamil','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
+
+
+
+insert into teacher values(101,'Rakib','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
+insert into teacher values(102,'Shafiq','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
+insert into teacher values(103,'Robiul','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
+insert into teacher values(104,'Ramim','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
+
+
+
+
+
+
+
+

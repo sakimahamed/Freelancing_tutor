@@ -1,0 +1,97 @@
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url(sk1.jpg);
+	background-size: middle;
+}
+
+
+
+.signup{
+	position: absolute;
+	top: 313px;
+	left: 694px;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0,0,0,.5);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.8);
+	border-radius: 10px;	
+}
+.signup h2
+{
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+
+}
+.signup h4
+{
+	color: #fff;
+
+}
+.signup .inputBox
+{
+	position: relative;	
+}
+.signup .inputBox input
+{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff; 
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	background: transparent;
+}
+.signup .inputBox label
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	letter-spacing: 1px;
+	padding: 3px 0;
+	font-size: 16px;
+	color: #fff;	
+	pointer-events: none;
+	transition: .5s;
+}
+.signup .inputBox input:focus ~ label,
+.signup .inputBox input:valid ~ label
+{
+	top: -18px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px;
+}
+.signup input[type="submit"]
+{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background-color: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.gender
+{
+	font-size: 20px;
+	color: #fff;
+}
+
+.member
+{
+	position: absolute;
+	color: #fff;
+
+}

@@ -1,0 +1,197 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url(sk1.jpg);
+	background-size: middle;
+}
+
+.freelancing
+{
+
+	position: absolute;
+    top: 109px;
+    left: 420px;
+    color: #fff;
+    font-size: 25px;
+    margin-left: 50px;
+    transform: translate(-50%,-50%);
+    width: 925px;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+
+}
+
+.qsn_typ
+{
+	position: absolute;
+    top: 422px;
+    left: 107px;
+    font-size: 30px;
+    margin-left: 60px;
+    transform: translate(-50%,-50%);
+    width: 320px;
+    height: 400px;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+}
+
+
+
+
+.qsn_typ input[type="submit"]
+{
+	width: 57%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff; 
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+
+.sign_out{
+	position: absolute;
+    top: 109px;
+    left: 1140px;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 203px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+}
+
+
+.sign_out .inputBox label
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;	
+	pointer-events: none;
+	transition: .5s;
+}
+
+
+.sign_out .inputBox
+{
+	position: relative;	
+}
+.sign_out .inputBox input
+{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff; 
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	background: transparent;
+}
+
+
+.sign_out .inputBox input:focus ~ label,
+.sign_out .inputBox input:valid ~ label
+{
+	top: -18px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px;
+}
+.sign_out input[type="submit"]
+{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background-color: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.sign_out .next input[type="submit"]
+{
+	background: transparent;
+	position: absolute;
+	top: 279%;
+	left: 76%;
+	border: none;
+	outline: none;
+	color: #fff;
+	background-color: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+
+
+.prev_Work  
+{
+	position: absolute;
+    top: 422px;
+    left: 778px;
+    font-size: 30px;
+    margin-left: 60px;
+    transform: translate(-50%,-50%);
+    width: 1002px;
+    height: 400px;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+}
+
+.prev_Work  input[type="submit"]
+{
+	width: 80%;
+	padding: 10px 0;
+	font-size: 20px;
+	color: #fff; 
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	background: transparent;
+}
+
+
+.description_Box
+{
+	position: absolute;
+	width: 10%;
+	top: 294px;
+	left:-482px;
+	padding: 0px 0;
+	font-size: 15px;	
+	color: #fff; 
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+    border-size:300px;		
+}
+ 	

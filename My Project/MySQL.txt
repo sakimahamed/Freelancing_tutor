@@ -1,0 +1,77 @@
+drop table If Exists Student;
+drop table If Exists Question;
+drop table If Exists Answer;
+drop table If Exists Project;
+drop table If Exists Assignment;
+drop table If Exists Teacher;
+
+
+
+CREATE TABLE Student
+(	
+    SId Int Not Null Primary Key,
+    SFirst_Name Varchar(20),
+    SMiddle_Name Varchar(20),
+    SLast_Name Varchar(20),
+    SEmail Varchar(20),
+    SProfession Varchar(50),
+    SGender Varchar(20),
+    SDate_Of_Birth DATE Not Null,
+    SInterested_Topic Varchar(30)
+    
+	
+);
+
+
+CREATE TABLE Question
+(	
+    Q_Id Int Not Null Primary Key,
+    Q_Description Varchar(200),
+    Q_Subject Varchar(20)
+    
+);
+
+CREATE TABLE Assignment
+(	
+    A_Id Int Not Null Primary Key,
+    A_Description Varchar(200),
+    A_Subject Varchar(20),
+    A_Dead_Line DATE Not Null
+    
+);
+
+
+CREATE TABLE Project
+(	
+    P_Id Int Not Null Primary Key,
+    P_Description Varchar(200),
+    P_Subject Varchar(20),
+    P_Dead_Line DATE Not Null	 
+    	
+);
+
+CREATE TABLE Answer
+(	
+    Ans_Id Int Not Null Primary Key,
+    Ans_Description Varchar(200),
+    Ans_Subject Varchar(20)
+    
+    
+);
+
+
+CREATE TABLE Teacher
+(	
+    TId Int Not Null Primary Key,
+    TFirst_Name Varchar(20),
+    TMiddle_Name Varchar(20),
+    TLast_Name Varchar(20),
+    TEmail Varchar(20),
+    TProfession Varchar(30),
+    TGender Varchar(20),
+    TContact_No int (10)  Not Null,	
+    TDate_Of_Birth DATE Not Null,
+    TInterested_Topic Varchar(30)
+    
+	
+);
