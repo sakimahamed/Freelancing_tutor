@@ -9,17 +9,14 @@ drop table If Exists Teacher;
 
 CREATE TABLE Student
 (	
-    SId Int Not Null Primary Key,
-    SFirst_Name Varchar(20),
-    SMiddle_Name Varchar(20),
-    SLast_Name Varchar(20),
-    SEmail Varchar(20),
-    SProfession Varchar(50),
-    SGender Varchar(20),
-    SDate_Of_Birth DATE Not Null,
-    SInterested_Topic Varchar(30)
-    
-	
+     
+    SFirst_Name Varchar(255),    
+    SLast_Name Varchar(255),
+    SEmail Varchar(255)  Not Null Primary Key, 
+    SPassword Varchar(255),	
+    SDate_Of_Birth DATE Not Null, 
+    SContact_no Varchar(255),   
+    SGender Varchar(255)	
 );
 
 
@@ -60,18 +57,16 @@ CREATE TABLE Answer
 );
 
 
+
 CREATE TABLE Teacher
 (	
-    TId Int Not Null Primary Key,
-    TFirst_Name Varchar(20),
-    TMiddle_Name Varchar(20),
-    TLast_Name Varchar(20),
-    TEmail Varchar(20),
-    TProfession Varchar(30),
-    TGender Varchar(20),
-    TContact_No int (10)  Not Null,	
-    TDate_Of_Birth DATE Not Null,
-    TInterested_Topic Varchar(30)
-    
-	
+     
+    TFirst_Name Varchar(255),    
+    TLast_Name Varchar(255),
+    TEmail Varchar(255)  Not Null Primary Key, 
+    TPassword Varchar(255),	
+    TDate_Of_Birth DATE Not Null, 
+    TContact_no Varchar(255),   
+    TGender Varchar(255)	
 );
+
