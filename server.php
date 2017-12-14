@@ -18,13 +18,12 @@
 		$gender = $_POST['Gender'];
 
 		$password = md5($password);//encrypt the password before saving in the database
-		$query = "INSERT INTO user
+		$query = "INSERT INTO Student
 				VALUES('$Firstname','$Lastname', '$Email','$password','$date','$mobile_no','$gender')";
 		$result= mysqli_query($db,$query);
 		header('location: signup.php');
 
-			$_SESSION['email'] = $Email;
-			$_SESSION['success'] = "You are now logged in";
+			
 	}
 	if (isset($_POST['Signup_as_Teacher'])) {
 		$Firstname =  $_POST['firstname'];
@@ -34,39 +33,41 @@
 		$gender = $_POST['Gender'];
 
 		$password = md5($password);//encrypt the password before saving in the database
-		$query = "INSERT INTO user1
+		$query = "INSERT INTO Teacher
 				VALUES('$Firstname','$Lastname', '$Email','$password','$date','$mobile_no','$gender')";
 		$result= mysqli_query($db,$query);
-		header('location: sighup.php');
+		header('location: t_interested_sub.php');
 
-			$_SESSION['email'] = $Email;
-			$_SESSION['success'] = "You are now logged in";
+			
+	}
+	if (isset($_POST['Done'])) {
+		$Email = $_POST['email'];
+
+		$query = "INSERT INTO t_interested_sub
+				VALUES(''$Email',)";
+		$result= mysqli_query($db,$query);
+		header('location: signup.php');
+
+			
 	}
 	// LOGIN USER
 	if (isset($_POST['login'])) {
 		$Email = $_POST['email'];
 		$password = $_POST['password1'];
 
-		if (empty($Email)) {
-			array_push($errors, "Email is required");
-		}
-		if (empty($password)) {
-			array_push($errors, "Password is required");
-		}
-
 		if (count($errors) == 0) {
 			$password = md5($password);
-			$query = "SELECT * FROM user WHERE Email='$Email' AND password='$password'";
-			$query2 = "SELECT * FROM user1 WHERE Email='$Email' AND password='$password'";
-			$results = mysqli_query($db, $query);
-			$results2 = mysqli_query($db, $query2);
+			$query_S = "SELECT * FROM Student WHERE Email='$Email' AND password='$password'";
+			$query_T = "SELECT * FROM Teacher WHERE Email='$Email' AND password='$password'";
+			$results = mysqli_query($db, $query_S);
+			$results2 = mysqli_query($db, $query_T);
 
-			if (mysqli_num_rows($results) == 1) {
+			if (mysqli_num_rows($results) == 0) {
 				$_SESSION['email'] = $Email;
 				$_SESSION['success'] = "You are now logged in";
 				header('location: page3.php');
 			}
-			if (mysqli_num_rows($results2) == 1) {
+			if (mysqli_num_rows($results2) == 0) {
 				$_SESSION['email'] = $Email;
 				$_SESSION['success'] = "You are now logged in";
 				header('location: page7.php');

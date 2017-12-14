@@ -42,14 +42,17 @@
             
           </div>           
           <input type="submit" name="Signup_as_Student" value="Signup_as_Student">
-          <input type="submit" name="Signup_as_Teacher" value="Signup_as_Teacher">
+          
+          <form action="t_interested_sub.php">
+            <input type="submit" name="Signup_as_Teacher" value="Signup_as_Teacher">
+          </form>
           
           <div class="member">
             <label>
               Already A member? <a href="login.php">LogIn</a>
             </label>   
           </div>                        
-        </form>
+        
 	</div>
 
 </body>
