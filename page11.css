@@ -11,10 +11,10 @@ body{
 {
 
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 420px;
     color: #fff;
-    font-size: 25px;
+    font-size: 17px;
     margin-left: 50px;
     transform: translate(-50%,-50%);
     width: 925px;
@@ -26,17 +26,16 @@ body{
     border-radius: 10px;
 
 }
-
 .qsn_typ
 {
 	position: absolute;
-    top: 422px;
+    top: 396px;
     left: 107px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
     width: 320px;
-    height: 400px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
@@ -63,15 +62,19 @@ body{
 	background: transparent;
 }
 
-
+.mail
+{		
+	color: #fff;
+	font-size: 20px;
+}
 
 .sign_out{
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 1140px;
     transform: translate(-50%,-50%);
     width: 400px;
-    height: 203px;
+    height: 167px;
     padding: 40px;
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
@@ -152,13 +155,13 @@ body{
 .drop_qsn  
 {
 	position: absolute;
-    top: 422px;
+    top: 396px;
     left: 778px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
     width: 1005px;
-    height: 400px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);

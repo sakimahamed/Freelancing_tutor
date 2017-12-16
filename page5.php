@@ -31,15 +31,21 @@
     <div class="sign_out">      
       <form>
         <div class="inputBox">
-          <input type="text" name="" required="">
-          <label>Email</label>            
+          <?php 
+            session_start();
+              $mail= $_SESSION['email'];
+              echo '
+                <div class="mail">
+                  <p>'.$mail.'</p>
+                </div>';
+          ?>           
         </div>               
       </form>
       <form action="login.php">
         <input type="submit" name="" value="SignOut">
       </form>      
     </div> 
-    <form action="page3.php">
+    <form method="POST">
     <div class="drop_qsn">
       <div>
         <font size="7">Drop Your Assignment</font> 
@@ -48,11 +54,14 @@
       <div class="inputBox">
           <label class="subject">Subject: </label>
             <select class="option" name="Subject">
-              <option>Math</option>
-              <option>English</option>
-              <option>Python</option>
-              <option>C</option>
+              <option>Mathematics</option>
+              <option>C_Programming</option>
               <option>Java</option>
+              <option>Python</option>
+              <option>C++</option>
+              <option>English</option>
+              <option>Accounting</option>
+              <option>Physics</option>
             </select>           
         </div> 
         <div class="description_Box">
@@ -61,12 +70,34 @@
 
           <div class="inputBox">
             <label>Dead_Line:</label>
-            <input type="Date" name="" required="">
+            <input type="Date" name="date" required="">
           </div>              
           <input type="submit" name="" value="Done">      
         </div>
       </div>
       </form>
     </div> 
+    <?php 
+      $errors = array(); 
+
+      $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+
+      if (isset($_POST['done'])) {
+     
+      
+      $A_description = $_POST['comment'];
+      $A_sub = $_POST['Subject'];
+      $A_daed_line = $_POST['date'];
+      
+    $query = "INSERT INTO assignment
+        VALUES('',$A_description','$A_sub','$A_daed_line')";
+    $result = $db->query($query);
+    header('location: page5.php');
+     
+  }
+    ?>
+
+
+
   </body>
 </html>

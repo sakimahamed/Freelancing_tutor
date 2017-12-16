@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!doctype html>
 <html>
   <head>
@@ -39,20 +37,24 @@ session_start();
       <div class="sign_out">      
         <form>        
           <div class="inputBox">
-            <?php
-                $Email=$_SESSION['email'];
-            ?>
-            <input type="text" name="" value=$Email required="">
-            <label>Email</label>            
+           <?php 
+            session_start();
+              $mail= $_SESSION['email'];
+              echo '
+                <div class="mail">
+                  <p>'.$mail.'</p>
+                </div>';
+          ?>            
           </div>               
         </form>
         <form action="login.php">
           <input type="submit" name="" value="SignOut">
         </form>
-        <div class="description_Box">  
-          <textarea rows="14" cols="105" name="comment" form="usrform"></textarea>       
-        </div>
+        
       </div>      
-    </div>     
+    </div> 
+    <div class=prev_qsn>
+          
+    </div>    
   </body>
 </html>

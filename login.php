@@ -4,17 +4,6 @@
       <meta charset="utf-8">
       <title>My Site</title>
       <link rel="stylesheet" type="text/css" href="login.css"> 
-      <script type="text/javascript">
-        function function1(){
-                var x=document.getElementByName("password1").value;
-                var y=document.getElementByName("email").value;
-                var xhttp=new XMLHttpRequest();
-                xhttp.open("POST","server.php?password1="+x+"&email="+y,true);
-                xhttp.send();
-                alert("pass is not ok");
-
-        }
-      </script>
   </head>
   <body>
     <div>
@@ -45,7 +34,7 @@
     </form>
     <div class="login">
       <h2>Log in</h2>
-      <form method="POST" action="server.php" onclick="return function1()">
+      <form method="POST" action="login.php">
         
         <div class="inputBox">
           <input type="text" name="email" required="">
@@ -63,6 +52,64 @@
         <input type="submit" name="" value="Signup">
       </form>
     </div>      
-    </div>     
+    </div> 
+
+    
+    <div class=recent_qsn>
+          
+        </div>
+  <?php 
+    session_start();
+    $errors = array();     
+    $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+    
+    if (isset($_POST['login'])) 
+    {
+      $Email = $_POST['email'];
+      $password = $_POST['password1'];    
+
+        if (!count($errors)) 
+        {
+          $password = md5($password);
+          $query_S = "SELECT * FROM Student WHERE SEmail='$Email' AND SPassword='$password'";
+          $query_T = "SELECT * FROM Teacher WHERE TEmail='$Email' AND TPassword='$password'";
+          $results = $db->query($query_S);
+          $results2 = $db->query($query_T);
+
+          $res=$results->fetch_assoc();
+          $res2=$results2->fetch_assoc();
+      
+
+        if ($res) 
+        {
+          $_SESSION['email'] = $Email;
+          $_SESSION['success'] = "";
+          header('location: page3.php');
+        }
+        else if ($res2) 
+        {
+          $_SESSION['email'] = $Email;
+          $_SESSION['success'] = "";
+          header('location: page7.php');
+        }
+        else 
+        {                 
+          echo '
+            <div class="wrong">
+              <h4>Please enter valid email or password</h4>
+            </div>
+           ';        
+        } 
+      }
+    }
+
+    echo '
+        
+
+    ';
+
+
+  ?>
   </body>
 </html>
+

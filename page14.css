@@ -11,10 +11,10 @@ body{
 {
 
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 420px;
     color: #fff;
-    font-size: 25px;
+    font-size: 17px;
     margin-left: 50px;
     transform: translate(-50%,-50%);
     width: 925px;
@@ -30,13 +30,13 @@ body{
 .qsn_typ
 {
 	position: absolute;
-    top: 422px;
+    top: 396px;
     left: 107px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
     width: 320px;
-    height: 400px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
@@ -67,11 +67,11 @@ body{
 
 .sign_out{
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 1140px;
     transform: translate(-50%,-50%);
     width: 400px;
-    height: 203px;
+    height: 167px;
     padding: 40px;
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
@@ -152,13 +152,13 @@ body{
 .drop_qsn  
 {
 	position: absolute;
-    top: 422px;
+    top: 396px;
     left: 778px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
     width: 1005px;
-    height: 400px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
@@ -179,4 +179,95 @@ body{
 	border-bottom: 1px solid;
 	outline: none;
 	background: transparent;
+}
+
+
+
+.option 
+{
+	position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 19%;
+    padding: -45px 0;
+    font-size: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: -3px solid;
+    outline: none;
+}
+
+
+.topic
+{
+	position: absolute;
+	top: -1px;
+	left: 152px;
+	font-size: 26px;
+}
+
+
+
+.search input[type="submit"]
+{
+	background: transparent;
+	position: absolute;
+	top: 9%;
+	left: 57%;
+	border: none;
+	outline: none;
+	color: #fff;
+	background-color: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+
+
+#inline
+{
+	
+    
+    margin-left: 0px;
+    margin-bottom: 17px;
+    height: 90px;
+    
+    color: #fff;
+    border-style: solid;
+    border-color: #03a9f4;
+    display: flex
+    
+	
+}
+.div
+{
+	position: absolute;
+    margin-top: 275px;
+    margin-left: 500px;
+    width: 500px;
+    height: 300px;
+
+    overflow: auto;
+    
+}
+
+
+.select
+{
+	
+	margin-top: -33px;
+    font-size: 37px;
+    color: #fff;
+    margin-left: 129px;
+
+
+}
+
+
+.mail
+{		
+	color: #fff;
+	font-size: 20px;
 }

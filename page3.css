@@ -10,10 +10,10 @@ body{
 {
 
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 420px;
     color: #fff;
-    font-size: 25px;
+    font-size: 17px;
     margin-left: 50px;
     transform: translate(-50%,-50%);
     width: 925px;
@@ -29,13 +29,13 @@ body{
 .qsn_typ
 {
 	position: absolute;
-    top: 422px;
+    top: 396px;
     left: 107px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
     width: 320px;
-    height: 400px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
@@ -65,17 +65,18 @@ body{
 
 .sign_out{
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 1140px;
     transform: translate(-50%,-50%);
     width: 400px;
-    height: 203px;
+    height: 167px;
     padding: 40px;
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
     border-radius: 10px;
 }
+
 
 
 .sign_out .inputBox label
@@ -151,13 +152,13 @@ body{
 .prev_Work  
 {
 	position: absolute;
-    top: 422px;
+    top: 396px;
     left: 776px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
     width: 1002px;
-    height: 400px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
@@ -196,3 +197,27 @@ body{
     border-size:300px;		
 }
 
+
+
+.mail
+{		
+	color: #fff;
+	font-size: 20px;
+}
+
+
+
+.prev_qsn
+{
+
+	margin-top: 267px;
+    margin-left: 440px;
+    margin-bottom: 50px;
+    height: 297px;
+    width: 790px;
+    color: #fff;
+    border-style: solid;
+    border-color: #fff;
+    display: flex;
+    overflow: auto;
+}

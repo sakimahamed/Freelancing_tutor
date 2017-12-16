@@ -12,12 +12,12 @@ body{
 
 	position: absolute;
     top: 109px;
-    left: 660px;
+    left: 633px;
     color: #fff;
     font-size: 25px;
     margin-left: 50px;
     transform: translate(-50%,-50%);
-    width: 1400px;
+    width: 1346px;
     text-align: center;
     padding: 40px;
     background: rgba(0,0,0,.5);
@@ -30,13 +30,13 @@ body{
 .int_sub
 {
 	position: absolute;
-	text-align: center;
-	color: #fff;
-	top: 226px;
-	left: 11px;
-	width: 1400px;
-	height: 428px;
-	 background: rgba(0,0,0,.5);
+    text-align: center;
+    color: #fff;
+    top: 218px;
+    left: 11px;
+    width: 1346px;
+    height: 389px;
+    background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
     border-radius: 10px;
@@ -44,8 +44,9 @@ body{
 .container {
     display: block;
     position: relative;
-    top: 300px;
-    left: 592px;
+    top: 278px;
+    left: 585px;
+    width: 20px;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
@@ -112,9 +113,9 @@ body{
 .done
 {
 	position: absolute;
-	top: 608px;
-	left: 900px;
-	background: transparent;
+    top: 555px;
+    left: 890px;
+    background: transparent;
     border: none;
     outline: none;
     color: #fff;

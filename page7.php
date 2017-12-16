@@ -33,17 +33,24 @@
     <div class="sign_out">      
       <form>
         <div class="inputBox">
-          <input type="text" name="" required="">
-          <label>Email</label>            
+          <?php 
+            session_start();
+              $mail= $_SESSION['email'];
+              echo '
+                <div class="mail">
+                  <p>'.$mail.'</p>
+                </div>';
+          ?>            
         </div>               
       </form>
-       <div class="description_Box">  
-        <textarea rows="15" cols="105" name="comment" form="usrform"></textarea>       
-      </div>
+       
       <form action="login.php">
         <input type="submit" name="" value="SignOut">
       </form>
     </div>      
-    </div>     
+    </div> 
+    <div class="prev_qsn">
+
+    </div>    
   </body>
 </html>

@@ -32,8 +32,14 @@
     <div class="sign_out">      
       <form>
         <div class="inputBox">
-          <input type="text" name="" required="">
-          <label>Email</label>            
+          <?php 
+            session_start();
+              $mail= $_SESSION['email'];
+              echo '
+                <div class="mail">
+                  <p>'.$mail.'</p>
+                </div>';
+          ?>             
         </div>               
       </form>
       <form action="login.php">
@@ -41,13 +47,66 @@
       </form>
     </div>      
     </div> 
-    <form class="drop_qsn">
-     
-    <div>
-        <font size="7">Find Your Tutor</font> 
+   
+    <form method="POST" class="drop_qsn" action="page14.php">
+      <div class="topic">
+        <h3 >Select topic:</h3>
       </div>
+        
+        <select class="option" type="Topic" name="Subject">
+              <option>-----</option>
+              <option>Mathematics</option>
+              <option>C_Programming</option>
+              <option>Java</option>
+              <option>Python</option>
+              <option>C++</option>
+              <option>English</option>
+              <option>Accounting</option>
+              <option>Physics</option>
+            </select>
+            <div class="search">
+              
+            <input type="submit" name="search" value="Search">
+            </div> 
+      
+      
     </form>
         
-    </form>     
+    </form> 
+        
+ 
+ <div class="div">
+   <?php 
+    $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+    if(isset($_POST['search'])) {
+
+    $Topic = $_POST['Subject'];
+
+    if($Topic=="-----")
+      echo '
+            <div class="select">
+              <p> Please select a topic </p>
+            </div>
+            ';
+
+    $query = "SELECT * from Teacher natural join interested_sub WHERE topic='$Topic'";
+    $result= $db->query($query);
+    $res=$result->fetch_assoc();
+    while($res){
+      echo '
+        <div id="inline">
+          <p>Name: '.$res["TFirst_Name"].' '.$res["TLast_Name"].'</p>
+          <p>Email: '.$res["TEmail"].'</p>
+          <p>Contact No: '.$res["TContact_no"].'</p>
+        </div>
+      ';
+
+      $res=$result->fetch_assoc();
+
+    }
+      
+  }
+ ?>
+ </div>
   </body>
 </html>

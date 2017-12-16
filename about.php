@@ -14,8 +14,14 @@
       <div class="sign_out">      
         <form>
           <div class="inputBox">
-            <input type="text" name="" required="">
-            <label>Email</label>            
+            <?php 
+            session_start();
+              $mail= $_SESSION['email'];
+              echo '
+                <div class="mail">
+                  <p>'.$mail.'</p>
+                </div>';
+          ?>             
           </div>               
         </form>
         <form action="login.php">

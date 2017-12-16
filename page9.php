@@ -29,8 +29,14 @@
       <div class="sign_out">      
         <form>
           <div class="inputBox">
-            <input type="text" name="" required="">
-            <label>Email</label>            
+            <?php 
+            session_start();
+              $mail= $_SESSION['email'];
+              echo '
+                <div class="mail">
+                  <p>'.$mail.'</p>
+                </div>';
+          ?>           
           </div>               
         </form>
         <form action="login.php">
@@ -43,11 +49,14 @@
         <label class="subject">Subject: </label>
         <form name="myform">
           <select class="option" name="Subject">
-            <option>Math</option>
-            <option>English</option>
-            <option>Python</option>
-            <option>C</option>
-            <option>Java</option>
+            <option>Mathematics</option>
+              <option>C_Programming</option>
+              <option>Java</option>
+              <option>Python</option>
+              <option>C++</option>
+              <option>English</option>
+              <option>Accounting</option>
+              <option>Physics</option>
           </select>
           <input type="submit" value="Ans" onclick="show(myform)">
         </form>

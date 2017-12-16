@@ -11,10 +11,10 @@ body{
 {
 
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 420px;
     color: #fff;
-    font-size: 25px;
+    font-size: 17px;
     margin-left: 50px;
     transform: translate(-50%,-50%);
     width: 925px;
@@ -30,16 +30,16 @@ body{
 
 .login{
 	position: absolute;
-    top: 313px;
+    top: 311px;
     left: 1145px;
     transform: translate(-50%,-50%);
     width: 400px;
-    height: 612px;
+    height: 602px;
     padding: 40px;
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
-    border-radius: 10px	
+    border-radius: 10px;
 }
 
 .for_pass
@@ -116,13 +116,13 @@ body{
 .qsn_typ
 {
 	position: absolute;
-    top: 422px;
+    top: 396px;
     left: 107px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
     width: 320px;
-    height: 400px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
@@ -151,16 +151,17 @@ body{
 .rec_qsn  
 {
 	position: absolute;
-    top: 422px;
-    left: 575px;
+    top: 396px;
+    left: 576px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
-    width: 600px;
-    height: 400px;
+    width: 602px;
+    height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
+    color: #fff;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
     border-radius: 10px;
@@ -178,4 +179,32 @@ body{
 	border-bottom: 1px solid;
 	outline: none;
 	background: transparent;
+}
+
+.wrong
+{	
+
+
+	margin-top: -398px;
+	margin-left: 985px;	
+	color: #fff;
+	font-size: 18px;
+}
+
+
+.recent_qsn
+{
+
+	margin-top: 267px;
+    margin-left: 376px;
+    margin-bottom: 50px;
+    height: 297px;
+    width: 519px;
+    color: #fff;
+    border-style: solid;
+    border-color: #fff;
+    overflow: auto;
+    display: flex
+
+
 }

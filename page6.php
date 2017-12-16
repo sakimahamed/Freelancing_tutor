@@ -31,15 +31,21 @@
     <div class="sign_out">      
       <form>
         <div class="inputBox">
-          <input type="text" name="" required="">
-          <label>Email</label>            
+          <?php 
+            session_start();
+              $mail= $_SESSION['email'];
+              echo '
+                <div class="mail">
+                  <p>'.$mail.'</p>
+                </div>';
+          ?>           
         </div>               
       </form>
       <form action="login.php">
         <input type="submit" name="" value="SignOut">
       </form>      
     </div>
-    <form action="page3.php"> 
+    <form method="POST"> 
     <div class="drop_qsn">
       <div>
         <font size="7">Drop Your Project</font> 
@@ -47,11 +53,14 @@
       <div class="inputBox">
           <label class="subject">Subject: </label>
             <select class="option" name="Subject">
-              <option>Math</option>
-              <option>English</option>
-              <option>Python</option>
-              <option>C</option>
+              <option>Mathematics</option>
+              <option>C_Programming</option>
               <option>Java</option>
+              <option>Python</option>
+              <option>C++</option>
+              <option>English</option>
+              <option>Accounting</option>
+              <option>Physics</option>
             </select>           
         </div> 
         <div class="description_Box">
@@ -66,5 +75,26 @@
       </div>                      
       </form>
     </div> 
+
+    <?php 
+      $errors = array(); 
+
+      $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+
+      if (isset($_POST['done'])) {
+     
+      
+      $P_description = $_POST['comment'];
+      $P_sub = $_POST['Subject'];
+      $P_daed_line = $_POST['date'];
+      
+    $query = "INSERT INTO project
+        VALUES('',$P_description','$P_sub','$P_daed_line')";
+    $result = $db->query($query);
+    header('location: page6.php');
+     
+  }
+    ?>
+
   </body>
 </html>
