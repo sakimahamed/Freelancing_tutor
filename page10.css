@@ -27,41 +27,6 @@ body{
 
 }
 
-.qsn_typ
-{
-	position: absolute;
-    top: 396px;
-    left: 107px;
-    font-size: 30px;
-    margin-left: 60px;
-    transform: translate(-50%,-50%);
-    width: 320px;
-    height: 429px;
-    text-align: center;
-    padding: 25px;
-    background: rgba(0,0,0,.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.8);
-    border-radius: 10px;
-}
-
-
-
-
-.qsn_typ input[type="submit"]
-{
-	width: 57%;
-	padding: 10px 0;
-	font-size: 16px;
-	color: #fff; 
-	letter-spacing: 1px;
-	margin-bottom: 5px;
-	border: none;
-	border-bottom: 1px solid;
-	outline: none;
-	cursor: pointer;
-	background: transparent;
-}
 
 .mail
 {		
@@ -157,11 +122,11 @@ body{
 {
 	position: absolute;
     top: 396px;
-    left: 778px;
+    left: 613px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
-    width: 1005px;
+    width: 1330px;
     height: 429px;
     text-align: center;
     padding: 25px;
@@ -171,58 +136,52 @@ body{
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
     border-radius: 10px;
 }
-.drop_qsn inputBox input
+
+.prev_qsn
 {
-	width: 100%;
-	padding: 10px 0;
-	font-size: 16px;
-	color: #fff; 
-	letter-spacing: 1px;
-	margin-bottom: 30px;
-	border: none;
-	border-bottom: 1px solid;
-	outline: none;
-	background: transparent;
+
+	margin-top: 28px;
+    margin-left: 219px;
+    margin-bottom: 50px;
+    height: 313px;
+    width: 858px;
+    color: #fff;
+    border-style: solid;
+    border-color: #fff;
+    display: flex;
+    overflow: auto;
+} 	
+
+.textarea
+{
+	margin-top: 241px;
 }
-
-
-
-.subject
+.ok
 {
 	position: absolute;
-	top: 20%;
-	left: 22%;
-	font-size: 40px;
-	
-}
-
-.option 
-{
-	position: absolute;
-	top: 22%;
-    left: 38%;
-    width: 17%;
-    padding: -43px 0;
-    font-size: 28px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    top: 333px;
+    left: 771px;
+    width: 80px;
+    height: 30px;
+    color: #fff;
     border: none;
-    border-bottom: -3px solid;
-    outline: none;	
+	outline: none;
+    background-color: #03a9f4;
+    border-radius: 5px;
 }
 
-
-.inputBox input[type="submit"]
+#inline
 {
-	position: absolute;
-	top: 22%;
-	left: 57%;
-	background: transparent;
-	border: none;
-	outline: none;
-	color: #fff;
-	background-color: #03a9f4;
-	padding: 9px 20px;
-	cursor: pointer;
-	border-radius: 5px;
+	
+    
+    margin-left: -513px;
+    margin-bottom: 17px;
+    height: 90px;
+    width: 900px;
+    color: #fff;
+    border-style: solid;
+    border-color: #03a9f4;
+    display: flex
+    
+	
 }

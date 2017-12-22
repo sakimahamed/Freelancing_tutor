@@ -3,11 +3,11 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="page9.css"> 
   </head>
   <body>
-    <div>
+   
       <div class="freelancing">
         <h1>Freelancing Tutor</h1>      
       </div>
@@ -16,7 +16,7 @@
           <input type="submit" name="" value="Assignment">
         </form>
         <form action="page9.php">
-          <input type="submit" name="" value="Question">
+          <input type="submit" name="done1" value="Question">
         </form>
         <form action="page13.php">
           <input type="submit" name="" value="Project">
@@ -43,12 +43,12 @@
           <input type="submit" name="" value="SignOut">
         </form>
       </div>          
-      <form action="page7.php">
       <div class="drop_qsn">     
       <div class="inputBox">
-        <label class="subject">Subject: </label>
-        <form name="myform">
-          <select class="option" name="Subject">
+        <label class="subject">Question Subject: </label>
+        <form method="POST" name="myform" action="page9.php">
+         <select class="option" type="Topic" name="Subject1">
+            <option>-----</option>  
             <option>Mathematics</option>
               <option>C_Programming</option>
               <option>Java</option>
@@ -58,19 +58,52 @@
               <option>Accounting</option>
               <option>Physics</option>
           </select>
-          <input type="submit" value="Ans" onclick="show(myform)">
-        </form>
-        <form action="page7.php">
-          <div>
-          <label class="qsn">Question=></label>
-          <textarea class="description_Box" rows="14" cols="20" name="comment" form="userform"></textarea>
-        </div>
-        <input type="submit" value="Ans" onclick="show(myform)">  
-        </form>
-                
+          <div class="search">
+             <input type="submit" name="src" value="Search">
+
+          </div>
+        </form>  
       </div>        
     </div>
-    </form> 
+    <div class="prev_qsn">
+
+      <?php 
+        $errors = array();    
+        $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+       if(isset($_POST['src'])) {
+        
+        $Topic = $_POST['Subject1'];
+        
+        
+        if($Topic=="-----"){
+          
+          echo '
+                <div class="select">
+                <p> Please select a topic </p>
+                </div>
+              ';
+        }
+        
+        $query = "SELECT * from Question where Q_Subject='$Topic'";
+        $result= $db->query($query);
+        $res1=$result->fetch_assoc();
+        while($res1){
+          echo '
+                <div id="inline">
+                  <p>Id: '.$res1["Q_Id"].'</p>
+                  <p>Question: '.$res1["Q_Description"].'</p>
+                  <p>Subject: '.$res1["Q_Subject"].'</p>
+                  <p>Email: '.$res1["S_Email"].'</p>
+                  <form method="POST" action="server.php">
+                      <button name="kk">Answer</button>
+                  </form>
+                </div>
+              ';
+        $res1=$result->fetch_assoc();
+      }
+    }
+  ?>
+
     </div>       
   </body>
 </html>

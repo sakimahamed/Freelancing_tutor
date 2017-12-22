@@ -113,24 +113,6 @@ body{
 
 
 
-.qsn_typ
-{
-	position: absolute;
-    top: 396px;
-    left: 107px;
-    font-size: 30px;
-    margin-left: 60px;
-    transform: translate(-50%,-50%);
-    width: 320px;
-    height: 429px;
-    text-align: center;
-    padding: 25px;
-    background: rgba(0,0,0,.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.8);
-    border-radius: 10px;
-}
-
 
 .qsn_typ input[type="submit"]
 {
@@ -152,19 +134,20 @@ body{
 {
 	position: absolute;
     top: 396px;
-    left: 576px;
+    left: 412px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
-    width: 602px;
+    width: 924px;
     height: 429px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
     color: #fff;
+
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .rec_qsn  input[type="submit"]
@@ -175,16 +158,15 @@ body{
 	color: #fff; 
 	letter-spacing: 1px;
 	margin-bottom: 5px;
-	border: none;
+	
 	border-bottom: 1px solid;
 	outline: none;
+	cursor: pointer;
 	background: transparent;
 }
 
 .wrong
 {	
-
-
 	margin-top: -398px;
 	margin-left: 985px;	
 	color: #fff;
@@ -192,19 +174,32 @@ body{
 }
 
 
-.recent_qsn
-{
 
-	margin-top: 267px;
-    margin-left: 376px;
-    margin-bottom: 50px;
-    height: 297px;
-    width: 519px;
+
+
+#inline
+{
+	
+    
+    margin-left: 0px;
+    margin-bottom: 17px;
+    height: 90px;
     color: #fff;
     border-style: solid;
-    border-color: #fff;
-    overflow: auto;
+    border-color: #03a9f4;
     display: flex
+    
+	
+}
 
+.recent_qsn
+{
+	position: absolute;
+    margin-top: 270px;
+    margin-left: 119px;
+    width: 714px;
+    height: 300px;
+    overflow: auto;
 
+    
 }

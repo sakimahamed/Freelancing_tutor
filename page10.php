@@ -3,7 +3,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="page10.css"> 
   </head>
   <body>
@@ -11,24 +11,6 @@
       <div class="freelancing">
       <h1>Freelancing Tutor</h1>      
     </div>
-    <div class="qsn_typ">
-        <form action="page5.php">
-          <input type="submit" name="" value="Assignment">
-        </form>
-        <form action="page14.php">
-          <input type="submit" name="" value="Find_Tutor">
-        </form>
-        <form action="page4.php">
-          <input type="submit" name="" value="Question">
-        </form>
-        <form action="page6.php">
-          <input type="submit" name="" value="Project">
-        </form>
-        <form action="about.php">
-          <input type="submit" name="" value="About">
-        </form>      
-      </div>
-    
     <div class="sign_out">      
       <form>
         <div class="inputBox">
@@ -47,30 +29,39 @@
       </form>
     </div>      
     </div> 
-    <script type="text/javascript">
-      function show(f) 
-      {
-        var x = f.Subject;
-        alert(x.value);
-      }
-    </script> 
+     
     <div class="drop_qsn">     
-      <div class="inputBox">
-        <label class="subject">Subject: </label>
-        <form name="myform">
-          <select class="option" name="Subject">
-            <option>Mathematics</option>
-              <option>C_Programming</option>
-              <option>Java</option>
-              <option>Python</option>
-              <option>C++</option>
-              <option>English</option>
-              <option>Accounting</option>
-              <option>Physics</option>
-          </select>
-          <input type="submit" value="Done" onclick="show(myform)">
-        </form>           
-      </div>        
-    </div>     
+      
+        <div class="prev_qsn">
+        <form method="POST" action="page9.php"> 
+        <div class="textarea">
+          <textarea rows="4" cols="70" name="comment"></textarea>
+          <button class="ok" name="kk">OK</button>
+        </div>
+        </form>
+    <?php 
+        $errors = array();    
+        $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+       if(isset($_POST['kk'])) {
+        // session_start();
+        // $Topic = $_POST['Subject1'];
+      
+        $query = "SELECT Q_Id, Q_Description FROM Question  ";
+        $result = $db->query($query);
+        $res1= $result->fetch_assoc();  
+          echo '
+                <div id="inline" >
+                  <p>Id: '.$res1["Q_Id"].'</p>
+                  <p>Question: '.$res1["Q_Description"].'</p>
+                </div>
+              ';
+      }
+    
+       ?>
+      </div>  
+          
+    </div>
+
+
   </body>
 </html>

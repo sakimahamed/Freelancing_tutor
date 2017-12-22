@@ -3,11 +3,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="page6.css"> 
 </head>
 <body>
-	<div>
+	
     <div class="freelancing">
       <h1>Freelancing Tutor</h1>      
     </div>
@@ -45,11 +45,12 @@
         <input type="submit" name="" value="SignOut">
       </form>      
     </div>
-    <form method="POST"> 
+    
     <div class="drop_qsn">
       <div>
         <font size="7">Drop Your Project</font> 
       </div>
+      <form method="POST" action="server.php"> 
       <div class="inputBox">
           <label class="subject">Subject: </label>
             <select class="option" name="Subject">
@@ -65,36 +66,15 @@
         </div> 
         <div class="description_Box">
           <label>Description:</label>  
-          <textarea rows="14" cols="115" name="comment" form="usrform"></textarea>
+          <textarea rows="14" cols="115" name="comment"></textarea>
           <div class="inputBox">
             <label>Dead_Line:</label>
-            <input type="Date" name="" required="">
+            <input type="Date" name="date">
           </div>
-          <input type="submit" name="" value="Done">         
+          <input type="submit" name="submit2" value="Done">         
         </div>
-      </div>                      
-      </form>
-    </div> 
-
-    <?php 
-      $errors = array(); 
-
-      $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
-
-      if (isset($_POST['done'])) {
-     
+        </form>
+      </div>
       
-      $P_description = $_POST['comment'];
-      $P_sub = $_POST['Subject'];
-      $P_daed_line = $_POST['date'];
-      
-    $query = "INSERT INTO project
-        VALUES('',$P_description','$P_sub','$P_daed_line')";
-    $result = $db->query($query);
-    header('location: page6.php');
-     
-  }
-    ?>
-
   </body>
 </html>

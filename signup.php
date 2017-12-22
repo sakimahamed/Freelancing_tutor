@@ -51,7 +51,8 @@
             <label>
               Already A member? <a href="login.php">LogIn</a>
             </label>   
-          </div>                        
+          </div>
+      </form>                        
         
 	</div>
 

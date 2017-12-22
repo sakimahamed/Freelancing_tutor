@@ -3,7 +3,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="page3.css"> 
   </head>
   <body>
@@ -50,11 +50,92 @@
         <form action="login.php">
           <input type="submit" name="" value="SignOut">
         </form>
-        
+        <form method="POST" action="page3.php" class="work" >
+          <input type="submit" name="done" value="Assignment">
+        </form>
+        <form method="POST" action="page3.php" class="work1" >
+          <input type="submit" name="done1" value="Question">
+        </form>
+        <form method="POST" action="page3.php" class="work2" >
+          <input type="submit" name="done2" value="Project">
+        </form>
       </div>      
     </div> 
-    <div class=prev_qsn>
-          
+    <div class=prev_qsn> 
+    <?php 
+      $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+      if(isset($_POST['done1'])) 
+      {
+        $mail1= $_SESSION['email'];
+        $query = "SELECT * FROM Question where S_Email='$mail1' ";
+        $result= $db->query($query);
+        $res=$result->fetch_assoc();
+        while($res)
+        {
+          echo '
+          <div id="inline">
+            <p>Id: '.$res["Q_Id"].'</p>
+            <p>Question: '.$res["Q_Description"].'</p>
+            <p>Subject:  '.$res["Q_Subject"].'</p>
+            <p>Email: '.$res["S_Email"].'</p>
+          </div>
+          ';
+          $res=$result->fetch_assoc();
+        }
+      }
+    ?>
+
+    <?php 
+      $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+      if(isset($_POST['done'])) 
+      {
+        $mail1= $_SESSION['email'];
+        $query = "SELECT * FROM Assignment where S_Email='$mail1' ";
+        $result= $db->query($query);
+        $res=$result->fetch_assoc();
+        while($res)
+        {
+          echo '
+          <div id="inline">
+            <p>Id: '.$res["A_Id"].'</p>
+            <p>Assignment: '.$res["A_Description"].'</p>
+            <p>Subject:  '.$res["A_Subject"].'</p>
+            <p>Email: '.$res["S_Email"].'</p>
+            <p>Dead_Line:  '.$res["A_Dead_Line"].'</p>
+          </div>
+          ';
+          $res=$result->fetch_assoc();
+        }
+      }
+    ?>   
+
+
+    <?php 
+      $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+      if(isset($_POST['done2'])) 
+      {
+        $mail1= $_SESSION['email'];
+        $query = "SELECT * FROM Project where S_Email='$mail1' ";
+        $result= $db->query($query);
+        $res=$result->fetch_assoc();
+        while($res)
+        {
+          echo '
+          <div id="inline">
+            <p>Id: '.$res["P_Id"].'</p>
+            <p>Project: '.$res["P_Description"].'</p>
+            <p>Subject:  '.$res["P_Subject"].'</p>
+            <p>Email: '.$res["S_Email"].'</p>
+            <p>Dead_Line:  '.$res["P_Dead_Line"].'</p>
+          </div>
+          ';
+          $res=$result->fetch_assoc();
+        }
+      }
+    ?>   
+
+
+
     </div>    
   </body>
 </html>

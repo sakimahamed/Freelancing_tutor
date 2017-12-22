@@ -132,6 +132,56 @@ body{
 	border-radius: 5px;
 }
 
+.sign_out .work input[type="submit"]
+{
+	    background: transparent;
+    border: none;
+    margin-top: 108px;
+    margin-left: -528px;
+    outline: none;
+    width: 80%;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+
+.work1
+{
+	background: transparent;
+    border: none;
+    margin-top: -35px;
+    margin-left: -270px;
+    outline: none;
+    width: 54%;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 0px 20px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.work2 
+{
+	background: transparent;
+    border: none;
+    margin-top: -35px;
+    margin-left: -12px;
+    outline: none;
+    width: 54%;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 0px 18px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+}
+
 .sign_out .next input[type="submit"]
 {
 	background: transparent;
@@ -183,6 +233,7 @@ body{
 
 
 
+
 .description_Box
 {
 	position: absolute;
@@ -207,17 +258,33 @@ body{
 
 
 
-.prev_qsn
-{
 
-	margin-top: 267px;
-    margin-left: 440px;
-    margin-bottom: 50px;
-    height: 297px;
-    width: 790px;
+
+
+#inline
+{
+	
+    
+    margin-left: 0px;
+    margin-bottom: 17px;
+    height: 90px;
+    
     color: #fff;
     border-style: solid;
-    border-color: #fff;
-    display: flex;
+    border-color: #03a9f4;
+    display: flex
+    
+	
+}
+
+.prev_qsn
+{
+	position: absolute;
+    margin-top: 296px;
+    margin-left: 472px;
+    width: 733px;
+    height: 300px;
     overflow: auto;
+
+    
 }

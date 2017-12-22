@@ -3,7 +3,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="page13.css"> 
   </head>
   <body>
@@ -43,12 +43,13 @@
           <input type="submit" name="" value="SignOut">
         </form>
       </div>      
-     <form action="page7.php">
+     
     <div class="drop_qsn">     
       <div class="inputBox">
-        <label class="subject">Subject: </label>
-        <form name="myform">
+        <label class="subject">Project Subject: </label>
+        <form method="POST" name="myform" action="page13.php">
           <select class="option" name="Subject">
+            <option>-----</option>
             <option>Mathematics</option>
               <option>C_Programming</option>
               <option>Java</option>
@@ -58,15 +59,65 @@
               <option>Accounting</option>
               <option>Physics</option>
           </select>
-          <input type="submit" value="Accept" onclick="show(myform)">
+          <input type="submit" name="src" value="Accept">
         </form>
-        <div>
-          <label class="qsn">Project=></label>
-          <textarea class="description_Box" rows="14" cols="20" name="comment" form="userform"></textarea>
-        </div>          
+                
       </div>        
     </div>
-  </form>
-    </div>     
+  
+    </div> 
+
+
+<div class="prev_qsn">
+
+      <?php 
+        $errors = array();    
+        $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+       if(isset($_POST['src'])) {
+        
+        $Topic = $_POST['Subject'];
+        
+
+        if($Topic=="-----"){
+          
+          echo '
+                <div class="select">
+                <p> Please select a topic </p>
+                </div>
+              ';
+        }
+        
+
+        $query = "SELECT * from Project where P_Subject='$Topic'";
+        $result= $db->query($query);
+        $res1=$result->fetch_assoc();
+        while($res1){
+          echo '
+                <div id="inline" >
+                  <p>Id: '.$res1["P_Id"].'</p>
+                  <p>Project: '.$res1["P_Description"].'</p>
+                  <p>Subject: '.$res1["P_Subject"].'</p>
+                  <p>Email: '.$res1["S_Email"].'</p>
+                  <p>Dead_Line: '.$res1["P_Dead_Line"].'</p>
+                  <form>
+                      <button>Accept</button>
+                  </form> 
+                </div>
+              ';
+        $res1=$result->fetch_assoc();
+
+       
+
+      }
+    }
+
+
+
+       ?>
+       
+
+
+     </div>
+
   </body>
 </html>

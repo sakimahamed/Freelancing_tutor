@@ -116,3 +116,21 @@ body{
 	color: #fff;
 	font-size: 20px;
 }
+.rec_qsn  
+{
+	position: absolute;
+    top: 436px;
+    left: 613px;
+    font-size: 30px;
+    margin-left: 60px;
+    transform: translate(-50%,-50%);
+    width: 1334px;
+    height: 429px;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.8);
+    border-radius: 10px;
+}

@@ -215,8 +215,8 @@ body{
 {
 	position: absolute;
     top: 6%;
-    left: 20%;
-    width: 12%;
+    left: 38%;
+    width: 16%;
     padding: -45px 0;
     font-size: 21px;
     letter-spacing: 2px;
@@ -256,3 +256,59 @@ body{
     margin-bottom: 30px;
     border-size: 300px;	
 }
+
+#inline
+{
+	
+    
+    margin-left: 0px;
+    margin-bottom: 17px;
+    height: 90px;
+    
+    color: #fff;
+    border-style: solid;
+    border-color: #03a9f4;
+    display: flex
+    
+	
+}
+
+
+.search input[type="submit"]
+{
+	position: absolute;
+    top: 5%;
+    left: 56%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 9px 20px;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+
+.select
+{
+	
+	margin-top: -33px;
+    font-size: 37px;
+    color: #fff;
+    margin-left: 129px;
+
+
+}
+
+.prev_qsn
+{
+
+	position: absolute;
+    margin-top: 257px;
+    margin-left: 500px;
+    width: 719px;
+    height: 300px;
+
+    overflow: auto;
+} 	

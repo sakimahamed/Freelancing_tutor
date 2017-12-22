@@ -3,7 +3,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="page8.css"> 
   </head>
   <body>

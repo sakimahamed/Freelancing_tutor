@@ -3,7 +3,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="about.css"> 
   </head>
   <body>
@@ -27,7 +27,15 @@
         <form action="login.php">
           <input type="submit" name="" value="SignOut">
         </form>
-      </div>       
+
+      </div> 
+      <form class="rec_qsn">
+      <div>
+        <h4>This software is made for any student who had no helping hand.
+           If anyone want some tutor from any corner of country,he/she can
+          choose his/her desirable tutor. </h4>
+      </div>
+    </form>      
     </div>     
   </body>
 </html>

@@ -3,7 +3,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="page14.css"> 
   </head>
   <body>
@@ -68,13 +68,9 @@
               
             <input type="submit" name="search" value="Search">
             </div> 
-      
-      
+   
     </form>
-        
-    </form> 
-        
- 
+
  <div class="div">
    <?php 
     $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');

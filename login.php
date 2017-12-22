@@ -2,34 +2,19 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>My Site</title>
+      <title>Freelancing Tutor</title>
       <link rel="stylesheet" type="text/css" href="login.css"> 
   </head>
   <body>
+    <div style="position: absolute;z-index: 0;left: 0;top: 0;width: 100%;height: 100%">
     <div>
       <div class="freelancing">
       <h1>Freelancing Tutor</h1>      
     </div>  
-    <form class="qsn_typ">
+    
+    <form method="POST" class="rec_qsn">
       <div>
-        <input type="submit" name="" value="Assignment">
-      </div>
-      <div>
-        <input type="submit" name="" value="Find_Tutor">
-      </div>
-      <div>
-        <input type="submit" name="" value="Question">
-      </div>
-      <div>
-        <input type="submit" name="" value="Project">
-      </div>
-      <div>
-        <input type="submit" name="" value="About">
-      </div>
-    </form>
-    <form class="rec_qsn">
-      <div>
-        <input type="submit" name="" value="Recent Question">
+        <input type="submit" name="rec_qsn" value="Recent Question">
       </div>
     </form>
     <div class="login">
@@ -55,9 +40,7 @@
     </div> 
 
     
-    <div class=recent_qsn>
-          
-        </div>
+    
   <?php 
     session_start();
     $errors = array();     
@@ -84,6 +67,7 @@
         {
           $_SESSION['email'] = $Email;
           $_SESSION['success'] = "";
+
           header('location: page3.php');
         }
         else if ($res2) 
@@ -102,14 +86,30 @@
         } 
       }
     }
-
-    echo '
-        
-
-    ';
-
-
   ?>
+  <div class=recent_qsn>
+    <?php 
+      $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+      if(isset($_POST['rec_qsn'])) 
+      {
+        $query = "SELECT * FROM question ORDER BY Q_Id DESC LIMIT 3";
+        $result= $db->query($query);
+        $res=$result->fetch_assoc();
+        while($res)
+        {
+          echo '
+          <div id="inline">
+            
+            <p>Question: '.$res["Q_Description"].'</p>
+            <p>Subject:  '.$res["Q_Subject"].'</p>
+          </div>
+          ';
+          $res=$result->fetch_assoc();
+        }
+      }
+    ?>
+  </div>
+    </div>
   </body>
 </html>
 
