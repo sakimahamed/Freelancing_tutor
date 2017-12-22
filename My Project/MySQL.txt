@@ -3,6 +3,7 @@ drop table If Exists Question;
 drop table If Exists Answer;
 drop table If Exists Project;
 drop table If Exists Assignment;
+drop table If Exists interested_sub;
 drop table If Exists Teacher;
 
 
@@ -22,17 +23,28 @@ CREATE TABLE Student
 
 CREATE TABLE Question
 (	
-    Q_Id Int Not Null Primary Key,
+    Q_Id Int Not Null AUTO_INCREMENT Primary Key,
     Q_Description Varchar(200),
-    Q_Subject Varchar(20)
+    Q_Subject Varchar(20),
+    S_Email Varchar (50)	
     
+);
+
+
+CREATE TABLE interested_sub
+(	
+     
+   
+    TEmail Varchar(100),   
+    Topic Varchar (100)	
 );
 
 CREATE TABLE Assignment
 (	
-    A_Id Int Not Null Primary Key,
+    A_Id Int Not Null AUTO_INCREMENT Primary Key,
     A_Description Varchar(200),
     A_Subject Varchar(20),
+    S_Email Varchar (50),
     A_Dead_Line DATE Not Null
     
 );
@@ -40,18 +52,21 @@ CREATE TABLE Assignment
 
 CREATE TABLE Project
 (	
-    P_Id Int Not Null Primary Key,
+    P_Id Int Not Null AUTO_INCREMENT Primary Key,
     P_Description Varchar(200),
     P_Subject Varchar(20),
+    S_Email Varchar (50),
     P_Dead_Line DATE Not Null	 
     	
 );
 
 CREATE TABLE Answer
 (	
-    Ans_Id Int Not Null Primary Key,
+    Q_Id Int ,
+    Ans_Id Int Not Null AUTO_INCREMENT Primary Key
     Ans_Description Varchar(200),
-    Ans_Subject Varchar(20)
+    Ans_Subject Varchar(20), 	
+    T_Email Varchar (50)
     
     
 );

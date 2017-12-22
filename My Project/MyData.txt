@@ -1,48 +1,44 @@
-
-insert into answer values(101,'sdsgf','math');
-insert into answer values(102,'sdsgf','math');
-insert into answer values(103,'sdsgf','math');
-insert into answer values(104,'sdsgf','math');
-
-
-insert into assignment values(101,'hello','math','2006-03-12');
-insert into assignment values(102,'hello','math','2006-03-12');
-insert into assignment values(103,'hello','math','2006-03-12');
-insert into assignment values(104,'hello','math','2006-03-12');
+INSERT INTO Student VALUES('Sakim'    ,   'Ahamed'  ,  'sakimahamed7@gmail.com'   ,   '1234'  ,   '1995-05-15'  ,   '01797288097'  ,  'male');
+INSERT INTO Student VALUES('Sagor'    ,   'Sorkar'  ,  'sagor@gmail.com'          ,   '1234'  ,   '1996-12-05'  ,   '01797121212'  ,  'male');
+INSERT INTO Student VALUES('Sarah'    ,   'Chawdury'  ,  'sarah@gmail.com'   ,   '1234'  ,   '1993-02-10'  ,   '01567567567'  ,  'female');
+INSERT INTO Student VALUES('Miftah'    ,   'Jaman'  ,  'jaman@gmail.com'          ,   '1234'  ,   '1996-01-23'  ,   '01898989898'  ,  'male');
+INSERT INTO Student VALUES('Miftahul'    ,   'Jannat'  ,  'miftahule151136@bscse.uiu.ac.bd'          ,   '1234'  ,   '1995-09-01'  ,   '01953850326'  ,  'female');
 
 
 
 
-insert into project values(101,'hello','cse','2006-03-12');
-insert into project values(102,'hello','cse','2006-03-12');
-insert into project values(103,'hello','cse','2006-03-12');
-insert into project values(104,'hello','cse','2006-03-12');
+INSERT INTO Teacher VALUES('Tamjid-Al'    ,   'Rahat'  ,  'rahat@gmail.com'   ,   '1234'  ,   '1988-12-15'  ,   '01583453345'  ,  'male');
+INSERT INTO Teacher VALUES('Shawkkhor'    ,   'Shotabdoh'  ,  'shawkkhor@gmail.com'          ,   '1234'  ,   '1985-01-01'  ,   '01797121212'  ,  'male');
+INSERT INTO Teacher VALUES('Euna'    ,   'Mehnaz_khan'  ,  'euna@gmail.com'   ,   '1234'  ,   '1990-02-10'  ,   '01567567567'  ,  'female');
+INSERT INTO Teacher VALUES('Shantanu'    ,   'Shipan_Sarkar'  ,  'shantanu@gmail.com'          ,   '1234'  ,   '1990-01-23'  ,   '01898989898'  ,  'male');
+
+INSERT INTO interested_sub VALUES('rahat@gmail.com'   ,'Python');
+INSERT INTO interested_sub VALUES('rahat@gmail.com'   ,'English');
+INSERT INTO interested_sub VALUES('rahat@gmail.com'   ,'Java');
+INSERT INTO interested_sub VALUES('shawkkhor@gmail.com'   ,'Python');
+INSERT INTO interested_sub VALUES('shawkkhor@gmail.com'   ,'Java');
+INSERT INTO interested_sub VALUES('shawkkhor@gmail.com'   ,'C_Programming');
+INSERT INTO interested_sub VALUES('shawkkhor@gmail.com'   ,'C++');
+INSERT INTO interested_sub VALUES('shantanu@gmail.com'   ,'Python');
+INSERT INTO interested_sub VALUES('shantanu@gmail.com'   ,'Java');
 
 
+INSERT INTO question  VALUES('','How to declare a floating point value in java?','Java','sakimahamed7@gmail.com');
+INSERT INTO question  VALUES('','what is the longest word?','English','sakimahamed7@gmail.com');
+INSERT INTO question  VALUES('','what is the easiest way to draw a daimond shape in c?','C_Programming','miftahule151136@bscse.uiu.ac.bd');
+INSERT INTO question  VALUES('','what is the to determine the circles diameter?','Mathematics','sagor@gmail.com');
 
 
-insert into question values(101,'hello','cse');
-insert into question values(102,'hello','cse');
-insert into question values(103,'hello','cse');
-insert into question values(104,'hello','cse');
+INSERT INTO assignment VALUES('','How to declare a floating point value in java?','Java','sakimahamed7@gmail.com','2017-12-22');
+INSERT INTO assignment VALUES('','what is the longest word?','English','sakimahamed7@gmail.com','2017-12-22');
+INSERT INTO assignment VALUES('','what is the easiest way to draw a daimond shape in c?','C_Programming','miftahule151136@bscse.uiu.ac.bd','2017-12-22');
+INSERT INTO assignment VALUES('','what is the to determine the circles diameter?','Mathematics','sagor@gmail.com','2017-12-22');
 
 
-insert into student values(101,'Sakim','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
-insert into student values(102,'Kamal','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
-insert into student values(103,'Rofiq','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
-insert into student values(104,'Jamil','_','Ahamed','r@gmail.com','student','Male','1990-03-12','math');
-
-
-
-insert into teacher values(101,'Rakib','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
-insert into teacher values(102,'Shafiq','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
-insert into teacher values(103,'Robiul','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
-insert into teacher values(104,'Ramim','_','Ahamed','r@gmail.com','teacher','Male','01674155541','1990-03-12','math');
-
-
-
-
-
+INSERT INTO project VALUES('','Make a java project on University Management System.
+                                 topic: student info, teachers info, stuff info ','Java','sakimahamed7@gmail.com','2017-12-28');
+INSERT INTO project VALUES('','Make a python project on University Management System.
+                                topic: student info, teachers info, stuff info ','Python','sagor@gmail.com','2017-12-30');
 
 
 
