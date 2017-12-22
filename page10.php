@@ -30,38 +30,36 @@
     </div>      
     </div> 
      
-    <div class="drop_qsn">     
-      
-        <div class="prev_qsn">
+    <div class="drop_qsn">           
+      <div class="prev_qsn">
         <form method="POST" action="page9.php"> 
-        <div class="textarea">
-          <textarea rows="4" cols="70" name="comment"></textarea>
-          <button class="ok" name="kk">OK</button>
-        </div>
+          <div class="textarea">
+            <textarea rows="4" cols="70" name="comment"></textarea>
+            <button class="ok" name="kk">OK</button>
+          </div>
         </form>
-    <?php 
+      <?php 
         $errors = array();    
         $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
-       if(isset($_POST['kk'])) {
-        // session_start();
-        // $Topic = $_POST['Subject1'];
+        if(isset($_POST['kk'])) 
+        {
+          $mail = $_SESSION['email'];
+          //$Ans_Subject =mysql_real_escape_string($_POST['Subject']);
+          $Ans_Description =mysql_real_escape_string($_POST['comment']);
       
-        $query = "SELECT Q_Id, Q_Description FROM Question  ";
-        $result = $db->query($query);
-        $res1= $result->fetch_assoc();  
-          echo '
-                <div id="inline" >
-                  <p>Id: '.$res1["Q_Id"].'</p>
-                  <p>Question: '.$res1["Q_Description"].'</p>
-                </div>
-              ';
-      }
-    
-       ?>
-      </div>  
-          
+          $query = "INSERT INTO answer
+                    VALUES('','','$Ans_Description','','$mail')";
+          $result = $db->query($query);
+          //$res1= $result->fetch_assoc();  
+          //echo '
+                //<div id="inline">
+                  //<p>Id: '.$res1["Q_Id"].'</p>
+                  //<p>Question: '.$res1["Q_Description"].'</p>
+                //</div>
+                //';
+        }
+      ?>
+      </div>            
     </div>
-
-
   </body>
 </html>

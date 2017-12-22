@@ -56,6 +56,7 @@
     {
       session_start();
       $Email = $_SESSION['email'];
+
       $Topic = $_POST['Subject'];
 
       for($i=0;$i<count($Topic);$i++)
@@ -73,6 +74,7 @@
   	{
       session_start();
       $Email = $_SESSION['email'];
+      $Q=$_SESSION['comment'];
       $Q_sub = mysql_real_escape_string($_POST['Subject']);
       $Q_description =mysql_real_escape_string($_POST['comment']);
     	$query = "INSERT INTO question
@@ -113,13 +115,13 @@
   	}
 
 
-    if (isset($_POST['kk'])) 
+    if (isset($_POST['ans'])) 
     {
       
-      session_start();
-      $Question=$_SESSION['comment'];
-      $query = "SELECT Q_Id, Q_Description FROM Question WHERE Q_Description='$Question' ";
-      $result = $db->query($query);
+      
+      $Q=$_SESSION['comment'];
+      $query = "SELECT Q_Id, Q_Description FROM Question WHERE Q_Description='$val'";
+        $result = $db->query($query);
         $res1= $result->fetch_assoc();  
           echo '
                 <div id="inline" >
@@ -127,8 +129,10 @@
                   <p>Question: '.$res1["Q_Description"].'</p>
                 </div>
               ';
-      $res1= $result->fetch_assoc(); 
-      header('location: page10.php');    
+        $res1= $result->fetch_assoc(); 
+        header('location: page10.php?val=12');
+     
+          
     }
 
    

@@ -85,8 +85,10 @@
         }
         
         $query = "SELECT * from Question where Q_Subject='$Topic'";
+        
         $result= $db->query($query);
         $res1=$result->fetch_assoc();
+
         while($res1){
           echo '
                 <div id="inline">
@@ -95,8 +97,17 @@
                   <p>Subject: '.$res1["Q_Subject"].'</p>
                   <p>Email: '.$res1["S_Email"].'</p>
                   <form method="POST" action="server.php">
-                      <button name="kk">Answer</button>
+                      <button name="ans">Answer</button>
+                      <button hidden="true"  name="uid" value= "4">Answer</button>
+
+                      <?php
+                        session_start();
+                        $Q=$_SESSION["comment"];
+
+                      ?>
+
                   </form>
+
                 </div>
               ';
         $res1=$result->fetch_assoc();

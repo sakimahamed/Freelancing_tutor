@@ -6,7 +6,6 @@
       <link rel="stylesheet" type="text/css" href="login.css"> 
   </head>
   <body>
-    <div style="position: absolute;z-index: 0;left: 0;top: 0;width: 100%;height: 100%">
     <div>
       <div class="freelancing">
       <h1>Freelancing Tutor</h1>      
@@ -76,10 +75,11 @@
           $_SESSION['success'] = "";
           header('location: page7.php');
         }
+
         else 
         {                 
           echo '
-            <div class="wrong">
+            <div style="color: white;position: absolute;top: 202px;left: 985px;">
               <h4>Please enter valid email or password</h4>
             </div>
            ';        
@@ -109,7 +109,6 @@
       }
     ?>
   </div>
-    </div>
   </body>
 </html>
 
