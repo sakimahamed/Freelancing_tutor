@@ -78,6 +78,10 @@
             <p>Question: '.$res["Q_Description"].'</p>
             <p>Subject:  '.$res["Q_Subject"].'</p>
             <p>Email: '.$res["S_Email"].'</p>
+            <form method="POST" action="page10.php">
+                      <button name="ans">Answer</button>
+                      <input type="hidden" name = "qid" value='.$q_id.'>
+                  </form>
           </div>
           ';
           $res=$result->fetch_assoc();
@@ -102,6 +106,10 @@
             <p>Subject:  '.$res["A_Subject"].'</p>
             <p>Email: '.$res["S_Email"].'</p>
             <p>Dead_Line:  '.$res["A_Dead_Line"].'</p>
+            <form method="POST" action="page10.php">
+                      <button name="ans">View</button>
+                      <input type="hidden" name = "qid" value='.$q_id.'>
+                  </form>
           </div>
           ';
           $res=$result->fetch_assoc();
@@ -127,6 +135,10 @@
             <p>Subject:  '.$res["P_Subject"].'</p>
             <p>Email: '.$res["S_Email"].'</p>
             <p>Dead_Line:  '.$res["P_Dead_Line"].'</p>
+            <form method="POST" action="page10.php">
+                      <button name="ans">View</button>
+                      <input type="hidden" name = "qid" value='.$q_id.'>
+                  </form>
           </div>
           ';
           $res=$result->fetch_assoc();

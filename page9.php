@@ -90,24 +90,17 @@
         $res1=$result->fetch_assoc();
 
         while($res1){
+          $q_id=$res1["Q_Id"];
           echo '
                 <div id="inline">
                   <p>Id: '.$res1["Q_Id"].'</p>
                   <p>Question: '.$res1["Q_Description"].'</p>
                   <p>Subject: '.$res1["Q_Subject"].'</p>
                   <p>Email: '.$res1["S_Email"].'</p>
-                  <form method="POST" action="server.php">
+                  <form method="POST" action="page10.php">
                       <button name="ans">Answer</button>
-                      <button hidden="true"  name="uid" value= "4">Answer</button>
-
-                      <?php
-                        session_start();
-                        $Q=$_SESSION["comment"];
-
-                      ?>
-
+                      <input type="hidden" name = "qid" value='.$q_id.'>
                   </form>
-
                 </div>
               ';
         $res1=$result->fetch_assoc();

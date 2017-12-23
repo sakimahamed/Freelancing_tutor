@@ -140,11 +140,11 @@ body{
 .prev_qsn
 {
 
-	margin-top: 28px;
-    margin-left: 219px;
+	margin-top: -351px;
+    margin-left: 93px;
     margin-bottom: 50px;
-    height: 313px;
-    width: 858px;
+    height: 268px;
+    width: 1017px;
     color: #fff;
     border-style: solid;
     border-color: #fff;
@@ -152,15 +152,27 @@ body{
     overflow: auto;
 } 	
 
+.t
+{
+    position: absolute;
+    
+    border-color: white;
+    margin-top: -396px;
+    margin-left: 93px;
+}
+
 .textarea
 {
-	margin-top: 241px;
+
+	margin-top: 309px;
+    margin-left: -579px; 
+
 }
 .ok
 {
 	position: absolute;
-    top: 333px;
-    left: 771px;
+    top: 370px;
+    left: 643px;
     width: 80px;
     height: 30px;
     color: #fff;
@@ -169,19 +181,42 @@ body{
     background-color: #03a9f4;
     border-radius: 5px;
 }
+.ok1
+{
+    position: absolute;
+    top: 19px;
+    left: 9px;
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #03a9f4;
+    border-radius: 5px;
+}
 
 #inline
 {
-	
-    
-    margin-left: -513px;
-    margin-bottom: 17px;
+	margin-left: -1000px;
+    margin-top: -60px;
+    margin-bottom: 9px;
     height: 90px;
-    width: 900px;
+    width: 994px;
     color: #fff;
-    border-style: solid;
+    font-size: 25px;
     border-color: #03a9f4;
-    display: flex
-    
+    display: flex;
 	
+}
+
+.D
+{
+   
+    margin-left: 1000px;
+    height: 300px;
+    width: 200px;   
+    border-color: white;
+    margin-top: 60px;   
+
+
 }

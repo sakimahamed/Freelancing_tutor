@@ -73,6 +73,12 @@
       <?php 
         $errors = array();    
         $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+        if(isset($_POST['acc1'])){
+          $ansid=$_POST['accept'];
+          echo $ansid;
+          $q="UPDATE project SET Flag = '1', T_Email = '$mail' WHERE P_Id ='$ansid'";
+          $r=$db->query($q);
+        }
        if(isset($_POST['src'])) {
         
         $Topic = $_POST['Subject'];
@@ -88,7 +94,7 @@
         }
         
 
-        $query = "SELECT * from Project where P_Subject='$Topic'";
+        $query = "SELECT * from Project where P_Subject='$Topic' && Flag='0'";
         $result= $db->query($query);
         $res1=$result->fetch_assoc();
         while($res1){
@@ -100,7 +106,8 @@
                   <p>Email: '.$res1["S_Email"].'</p>
                   <p>Dead_Line: '.$res1["P_Dead_Line"].'</p>
                   <form>
-                      <button>Accept</button>
+                      <button name="acc1">Search</button>
+                      <input type="hidden" name = "accept" value='.$res1["P_Id"].'>
                   </form> 
                 </div>
               ';
