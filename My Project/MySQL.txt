@@ -13,7 +13,7 @@ CREATE TABLE Student
      
     SFirst_Name Varchar(255),    
     SLast_Name Varchar(255),
-    SEmail Varchar(255)  Not Null Primary Key, 
+    SEmail Varchar(50)  Not Null Primary Key, 
     SPassword Varchar(255),	
     SDate_Of_Birth DATE Not Null, 
     SContact_no Varchar(255),   
@@ -41,31 +41,35 @@ CREATE TABLE interested_sub
 
 CREATE TABLE Assignment
 (	
+   	
     A_Id Int Not Null AUTO_INCREMENT Primary Key,
     A_Description Varchar(200),
     A_Subject Varchar(20),
     S_Email Varchar (50),
-    A_Dead_Line DATE Not Null
+    A_Dead_Line DATE Not Null,
+    T_Email Varchar(50),
+    Flag Int	
     
 );
 
 
 CREATE TABLE Project
 (	
+         Flag Int,
     P_Id Int Not Null AUTO_INCREMENT Primary Key,
     P_Description Varchar(200),
     P_Subject Varchar(20),
     S_Email Varchar (50),
-    P_Dead_Line DATE Not Null	 
+    P_Dead_Line DATE Not Null,
+    T_Email Varchar(50)		 
     	
 );
 
 CREATE TABLE Answer
 (	
     Q_Id Int ,
-    Ans_Id Int Not Null AUTO_INCREMENT Primary Key
-    Ans_Description Varchar(200),
-    Ans_Subject Varchar(20), 	
+    Ans_Id Int Not Null AUTO_INCREMENT Primary Key,
+    Ans_Description Varchar(200), 	
     T_Email Varchar (50)
     
     
@@ -78,7 +82,7 @@ CREATE TABLE Teacher
      
     TFirst_Name Varchar(255),    
     TLast_Name Varchar(255),
-    TEmail Varchar(255)  Not Null Primary Key, 
+    TEmail Varchar(50)  Not Null Primary Key, 
     TPassword Varchar(255),	
     TDate_Of_Birth DATE Not Null, 
     TContact_no Varchar(255),   

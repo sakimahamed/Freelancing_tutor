@@ -29,16 +29,16 @@ INSERT INTO question  VALUES('','what is the easiest way to draw a daimond shape
 INSERT INTO question  VALUES('','what is the to determine the circles diameter?','Mathematics','sagor@gmail.com');
 
 
-INSERT INTO assignment VALUES('','How to declare a floating point value in java?','Java','sakimahamed7@gmail.com','2017-12-22');
-INSERT INTO assignment VALUES('','what is the longest word?','English','sakimahamed7@gmail.com','2017-12-22');
-INSERT INTO assignment VALUES('','what is the easiest way to draw a daimond shape in c?','C_Programming','miftahule151136@bscse.uiu.ac.bd','2017-12-22');
-INSERT INTO assignment VALUES('','what is the to determine the circles diameter?','Mathematics','sagor@gmail.com','2017-12-22');
+INSERT INTO assignment VALUES('','How to declare a floating point value in java?','Java','sakimahamed7@gmail.com','2017-12-22','');
+INSERT INTO assignment VALUES('','what is the longest word?','English','sakimahamed7@gmail.com','2017-12-22','');
+INSERT INTO assignment VALUES('','what is the easiest way to draw a daimond shape in c?','C_Programming','miftahule151136@bscse.uiu.ac.bd','2017-12-22','');
+INSERT INTO assignment VALUES('','what is the to determine the circles diameter?','Mathematics','sagor@gmail.com','2017-12-22','');
 
 
 INSERT INTO project VALUES('','Make a java project on University Management System.
-                                 topic: student info, teachers info, stuff info ','Java','sakimahamed7@gmail.com','2017-12-28');
+                                 topic: student info, teachers info, stuff info ','Java','sakimahamed7@gmail.com','2017-12-28','');
 INSERT INTO project VALUES('','Make a python project on University Management System.
-                                topic: student info, teachers info, stuff info ','Python','sagor@gmail.com','2017-12-30');
+                                topic: student info, teachers info, stuff info ','Python','sagor@gmail.com','2017-12-30','');
 
 
 
