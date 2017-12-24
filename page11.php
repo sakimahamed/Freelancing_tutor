@@ -77,7 +77,7 @@
         $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
         if(isset($_POST['acc'])){
           $ansid=$_POST['accept'];
-          echo $ansid;
+          
           $q="UPDATE assignment SET Flag = '1', T_Email = '$mail' WHERE A_Id ='$ansid'";
           $r=$db->query($q);
         }

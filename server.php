@@ -109,7 +109,7 @@
       $A_description =mysql_real_escape_string($_POST['comment']);
       $A_Dead_line = mysql_real_escape_string($_POST['date']);
       $query = "INSERT INTO assignment
-        VALUES('','$A_description','$A_sub','$Email','$A_Dead_line','')";
+        VALUES('','$A_description','$A_sub','$Email','$A_Dead_line','','')";
       $result = $db->query($query);
        header('location: page3.php');
       }
@@ -133,7 +133,7 @@
       $Email=$_SESSION['email'];
       
       $query = "INSERT INTO project
-        VALUES('','$P_description','$P_sub','$Email','$P_Dead_line','')";
+        VALUES('','$P_description','$P_sub','$Email','$P_Dead_line','','')";
       $result = $db->query($query);
        header('location: page3.php');
       }

@@ -59,7 +59,7 @@
               <option>Accounting</option>
               <option>Physics</option>
           </select>
-          <input type="submit" name="src" value="Accept">
+          <input type="submit" name="src" value="Search">
         </form>
                 
       </div>        
@@ -75,7 +75,6 @@
         $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
         if(isset($_POST['acc1'])){
           $ansid=$_POST['accept'];
-          echo $ansid;
           $q="UPDATE project SET Flag = '1', T_Email = '$mail' WHERE P_Id ='$ansid'";
           $r=$db->query($q);
         }
@@ -105,8 +104,8 @@
                   <p>Subject: '.$res1["P_Subject"].'</p>
                   <p>Email: '.$res1["S_Email"].'</p>
                   <p>Dead_Line: '.$res1["P_Dead_Line"].'</p>
-                  <form>
-                      <button name="acc1">Search</button>
+                  <form method="POST" action="page13.php">
+                      <button name="acc1">Accept</button>
                       <input type="hidden" name = "accept" value='.$res1["P_Id"].'>
                   </form> 
                 </div>
@@ -117,13 +116,7 @@
 
       }
     }
-
-
-
        ?>
-       
-
-
      </div>
 
   </body>

@@ -1,4 +1,4 @@
-body{
+	body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
@@ -157,11 +157,11 @@ body{
 {
 	position: absolute;
     top: 396px;
-    left: 778px;
+    left: 615px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
-    width: 1005px;
+    width: 1334px;
     height: 429px;
     text-align: center;
     padding: 25px;
