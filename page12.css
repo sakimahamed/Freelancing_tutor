@@ -214,8 +214,8 @@
 .inputBox input[type="submit"]
 {
 	position: absolute;
-	top: 22%;
-	left: 57%;
+	top: 6%;
+	left: 1%;
 	background: transparent;
 	border: none;
 	outline: none;
@@ -224,4 +224,31 @@
 	padding: 9px 20px;
 	cursor: pointer;
 	border-radius: 5px;
+}
+
+
+.prev_qsn
+{
+	position: absolute;
+    margin-top: 255px;
+    margin-left: 282px;
+    border-color: white;
+    width: 752px;
+    height: 300px;
+    border-style: solid;
+    border-color: #fff;
+    overflow: auto;
+} 	
+
+
+#inline
+{
+	margin-left: 0px;
+    margin-bottom: 17px;
+    height: 9px;
+    font-size: 25px;
+    color: #fff;
+    /* border-style: solid; */
+    border-color: #03a9f4;
+    display: flex;
 }

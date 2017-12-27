@@ -1,4 +1,4 @@
-body{
+	body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
@@ -26,6 +26,7 @@ body{
     border-radius: 10px;
 
 }
+
 .qsn_typ
 {
 	position: absolute;
@@ -45,7 +46,11 @@ body{
 }
 
 
-
+.mail
+{		
+	color: #fff;
+	font-size: 20px;
+}
 
 .qsn_typ input[type="submit"]
 {
@@ -62,11 +67,7 @@ body{
 	background: transparent;
 }
 
-.mail
-{		
-	color: #fff;
-	font-size: 20px;
-}
+
 
 .sign_out{
 	position: absolute;
@@ -156,11 +157,11 @@ body{
 {
 	position: absolute;
     top: 396px;
-    left: 778px;
+    left: 615px;
     font-size: 30px;
     margin-left: 60px;
     transform: translate(-50%,-50%);
-    width: 1005px;
+    width: 1334px;
     height: 429px;
     text-align: center;
     padding: 25px;
@@ -184,54 +185,24 @@ body{
 	background: transparent;
 }
 
-.inputBox input[type="submit"]
-{
-    position: absolute;
-    top: 5%;
-    left: 90%;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: #03a9f4;
-    padding: 9px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+
 .subject
 {
 	position: absolute;
-	top: 4%;
-	left: 8%;
-	font-size: 30px;
+	top: 20%;
+	left: 22%;
+	font-size: 40px;
 	
 }
-
-.qsn
-{
-	position: absolute;
-	top: 21%;
-	left: 8%;
-	font-size: 30px;
-}
-
-.ans
-{
-	position: absolute;
-	top: 59%;
-	left: 10%;
-	font-size: 30px;
-}
-
 
 .option 
 {
 	position: absolute;
-    top: 6%;
+	top: 22%;
     left: 38%;
-    width: 16%;
-    padding: -45px 0;
-    font-size: 21px;
+    width: 17%;
+    padding: -43px 0;
+    font-size: 28px;
     letter-spacing: 2px;
     margin-bottom: 10px;
     border: none;
@@ -240,74 +211,45 @@ body{
 }
 
 
-
-
-
-.description_Box
+.inputBox input[type="submit"]
 {
 	position: absolute;
-    width: 65%;
-    top: 87px;
-    left: 280px;
-    padding: 0px 0;
-    font-size: 15px;
-    letter-spacing: 0px;
-    margin-bottom: 30px;
-    border-size: 300px;	
+	top: 16%;
+	left: 1%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background-color: #03a9f4;
+	padding: 9px 20px;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
-#inline
-{
-	
-    
-    margin-left: 0px;
-    margin-bottom: 17px;
-    height: 90px;
-    
-    color: #fff;
-    border-style: solid;
-    border-color: #03a9f4;
-    display: flex
-    
-	
-}
-
-
-.search input[type="submit"]
-{
-	position: absolute;
-    top: 5%;
-    left: 56%;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    background-color: #03a9f4;
-    padding: 9px 20px;
-    cursor: pointer;
-    border-radius: 5px
-}
-
-
-.select
-{
-	
-	margin-top: -33px;
-    font-size: 37px;
-    color: #fff;
-    margin-left: 129px;
-
-
-}
 
 .prev_qsn
 {
-
 	position: absolute;
-    margin-top: 257px;
-    margin-left: 500px;
-    width: 719px;
+    margin-top: 13px;
+    margin-left: 282px;
+    border-color: white;
+    width: 752px;
     height: 300px;
-
-    overflow: auto;
+    
+    border-color: #fff;
+    
 } 	
+
+
+#inline
+{
+	margin-left: 0px;
+    margin-bottom: 17px;
+    height: 9px;
+    font-size: 25px;
+    color: #fff;
+    /* border-style: solid; */
+    border-color: #03a9f4;
+    display: flex;
+    margin-top: 29px;
+}

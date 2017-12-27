@@ -11,10 +11,10 @@ body{
 {
 
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 420px;
     color: #fff;
-    font-size: 25px;
+    font-size: 17px;
     margin-left: 50px;
     transform: translate(-50%,-50%);
     width: 925px;
@@ -29,11 +29,11 @@ body{
 
 .sign_out{
 	position: absolute;
-    top: 109px;
+    top: 92px;
     left: 1140px;
     transform: translate(-50%,-50%);
     width: 400px;
-    height: 203px;
+    height: 166px;
     padding: 40px;
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
@@ -119,13 +119,13 @@ body{
 .rec_qsn  
 {
 	position: absolute;
-    top: 436px;
-    left: 613px;
+    top: 399px;
+    left: 617px;
     font-size: 30px;
-    margin-left: 60px;
+    margin-left: 58px;
     transform: translate(-50%,-50%);
-    width: 1334px;
-    height: 429px;
+    width: 1335px;
+    height: 422px;
     text-align: center;
     padding: 25px;
     background: rgba(0,0,0,.5);
@@ -133,4 +133,37 @@ body{
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.8);
     border-radius: 10px;
+}
+
+.about1
+{
+	position: absolute;
+    top: 50px;
+    left: 157px;
+    width: 369px;
+    height: 350px;
+    border-color: #03a9f4;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+
+.about2
+{
+	position: absolute;
+    top: 50px;
+    left: 800px;
+    width: 369px;
+    height: 350px;
+    border-color: #03a9f4;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.p1
+{
+	position: absolute;
+	top: 100px;
+	left: 20px;
+
 }

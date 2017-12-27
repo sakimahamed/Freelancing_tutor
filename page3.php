@@ -72,14 +72,19 @@
         $res=$result->fetch_assoc();
         while($res)
         {
+          $q_id=$res["Q_Id"];
           echo '
           <div id="inline">
-            <p>Id: '.$res["Q_Id"].'</p>
-            <p>Question: '.$res["Q_Description"].'</p>
-            <p>Subject:  '.$res["Q_Subject"].'</p>
-            <p>Email: '.$res["S_Email"].'</p>
+            <p>Id:</p>
+            <p style="color:#03a9f4;">'.$res["Q_Id"].'&nbsp&nbsp</p>
+            <p>Question:</p>
+            <p style="color:#03a9f4;">'.$res["Q_Description"].'&nbsp&nbsp</p>
+            <p>Subject:</p>
+            <p style="color:#03a9f4;">'.$res["Q_Subject"].'&nbsp&nbsp</p>
+            <p>Email:</p>
+            <p style="color:#03a9f4;">'.$res["S_Email"].'&nbsp&nbsp</p>
             <form method="POST" action="page12.php">
-                      <button name="ans">Answer</button>
+                      <button name="ans1">Answer</button>
                       <input type="hidden" name = "qid" value='.$q_id.'>
                   </form>
           </div>
@@ -99,16 +104,22 @@
         $res=$result->fetch_assoc();
         while($res)
         {
+          $a_id=$res["A_Id"];
           echo '
           <div id="inline">
-            <p>Id: '.$res["A_Id"].'</p>
-            <p>Assignment: '.$res["A_Description"].'</p>
-            <p>Subject:  '.$res["A_Subject"].'</p>
-            <p>Email: '.$res["S_Email"].'</p>
-            <p>Dead_Line:  '.$res["A_Dead_Line"].'</p>
-            <form method="POST" action="page12.php">
-                      <button name="ans">View</button>
-                      <input type="hidden" name = "qid" value='.$q_id.'>
+            <p>Id:</p>
+            <p style="color:#03a9f4;">'.$res["A_Id"].'&nbsp</p>
+            <p>Assignment:</p>
+            <p style="color:#03a9f4;">'.$res["A_Description"].'&nbsp</p>
+            <p>Subject:</p>
+            <p style="color:#03a9f4;">'.$res["A_Subject"].'&nbsp</p>
+            <p>Email:</p>
+            <p style="color:#03a9f4;">'.$res["S_Email"].'&nbsp</p>
+            <p>Dead_Line:</p>
+            <p style="color:#03a9f4;">'.$res["A_Dead_Line"].'&nbsp</p>
+            <form method="POST" action="page15.php">
+                      <button name="ans2">View</button>
+                      <input type="hidden" name = "qid" value='.$a_id.'>
                   </form>
           </div>
           ';
@@ -128,16 +139,22 @@
         $res=$result->fetch_assoc();
         while($res)
         {
+          $p_id=$res["P_Id"];
           echo '
           <div id="inline">
-            <p>Id: '.$res["P_Id"].'</p>
-            <p>Project: '.$res["P_Description"].'</p>
-            <p>Subject:  '.$res["P_Subject"].'</p>
-            <p>Email: '.$res["S_Email"].'</p>
-            <p>Dead_Line:  '.$res["P_Dead_Line"].'</p>
-            <form method="POST" action="page12.php">
-                      <button name="ans">View</button>
-                      <input type="hidden" name = "qid" value='.$q_id.'>
+            <p>Id:</p>
+            <p style="color:#03a9f4;">'.$res["P_Id"].'&nbsp&nbsp</p>
+            <p>Project:</p>
+            <p style="color:#03a9f4;">'.$res["P_Description"].'&nbsp&nbsp</p>
+            <p>Subject:</p>
+            <p style="color:#03a9f4;">'.$res["P_Subject"].'&nbsp&nbsp</p>
+            <p>Email:</p>
+            <p style="color:#03a9f4;">'.$res["S_Email"].'&nbsp&nbsp</p>
+            <p>Dead_Line:</p>
+            <p style="color:#03a9f4;">'.$res["P_Dead_Line"].'&nbsp&nbsp</p>
+            <form method="POST" action="page16.php">
+                      <button name="ans3">View</button>
+                      <input type="hidden" name = "qid" value='.$p_id.'>
                   </form>
           </div>
           ';

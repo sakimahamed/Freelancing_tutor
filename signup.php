@@ -49,7 +49,7 @@
           
           <div class="member">
             <label>
-              Already A member? <a href="login.php">LogIn</a>
+              Already A member? <a href="login.php"><button>LogIn</button></a>
             </label>   
           </div>
       </form>                        

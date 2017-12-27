@@ -14,7 +14,6 @@
     <div >
             
       </div>
-    
     <div class="sign_out">      
       <form>
         <div class="inputBox">
@@ -37,8 +36,62 @@
       <div class="inputBox">
         <form name="myform" action="page3.php">
           <input type="submit" value="Back">
-        </form>           
+        </form> 
+        <div class="t">
+          <?php 
+            $errors = array();    
+            $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
+            if(isset($_POST['ans1']))
+            {
+              $q_id=$_POST['qid'];
+              $_SESSION['q']=$q_id;
+              $query = "SELECT * FROM Question WHERE Q_Id = '$q_id'";
+              $result= $db->query($query);
+
+              $res=$result->fetch_assoc();
+            
+              echo $res['Q_Description'];
+            }
+            else
+            {
+              $q_id=$_SESSION['q'];
+              $query = "SELECT * FROM Question WHERE Q_Id = '$q_id'";
+              $result= $db->query($query);
+
+              $res=$result->fetch_assoc();
+            
+              echo $res['Q_Description'];
+            }
+          ?>
+        </div>     
       </div>        
-    </div>         
+    </div> 
+    <div class="prev_qsn">
+      <?php 
+        $errors = array();    
+        $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor'); 
+        $query1 = "SELECT * FROM answer where Q_Id='$q_id'";
+        $res1 = $db->query($query1);
+        $res2= $res1->fetch_assoc();
+
+        while ($res2) 
+        {
+          $email=$res2['T_Email'];
+          $q="SELECT * FROM teacher where TEmail='$email'";
+          $r1=$db->query($q);
+          $r2=$r1->fetch_assoc();
+          $first_name=$r2['TFirst_Name'];
+          $last_name=$r2['TLast_Name'];
+          echo '
+                <div id="inline">
+                  <p style="color:#03a9f4;">'.$first_name.'&nbsp</p>
+                  <p style="color:#03a9f4;">'.$last_name.'&nbsp</p>
+                  <p>'.$res2['Ans_Description'].'</p>
+                </div>
+              ';
+          $res2= $res1->fetch_assoc();
+        }
+      ?>      
+    </div>
   </body>
 </html>

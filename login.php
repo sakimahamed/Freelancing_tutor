@@ -90,23 +90,24 @@
   <div class=recent_qsn>
     <?php 
       $db = mysqli_connect('localhost', 'root', '', 'freelancing_tutor');
-      if(isset($_POST['rec_qsn'])) 
-      {
-        $query = "SELECT * FROM question ORDER BY Q_Id DESC LIMIT 3";
+      //if(isset($_POST['rec_qsn'])) 
+      //{
+        $query = "SELECT * FROM question ORDER BY Q_Id DESC LIMIT 5";
         $result= $db->query($query);
         $res=$result->fetch_assoc();
         while($res)
         {
           echo '
           <div id="inline">
-            
-            <p>Question: '.$res["Q_Description"].'</p>
-            <p>Subject:  '.$res["Q_Subject"].'</p>
+            <p>Question:</p>
+            <p style="color:#03a9f4;">'.$res["Q_Description"].'&nbsp&nbsp</p>
+            <p>Subject:</p>
+            <p style="color:#03a9f4;">'.$res["Q_Subject"].'&nbsp&nbsp</p>
           </div>
           ';
           $res=$result->fetch_assoc();
         }
-      }
+      //}
     ?>
   </div>
   </body>

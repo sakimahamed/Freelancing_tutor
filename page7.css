@@ -203,14 +203,80 @@ body{
 .prev_qsn
 {
 
-	margin-top: 267px;
-    margin-left: 440px;
-    margin-bottom: 50px;
-    height: 297px;
-    width: 790px;
-    color: #fff;
-    border-style: solid;
-    border-color: #fff;
-    display: flex;
+	position: absolute;
+    margin-top: 293px;
+    margin-left: 422px;
+    width: 834px;
+    height: 300px;
     overflow: auto;
 } 	
+
+.work
+{
+	background: transparent;
+    border: none;
+    margin-top: 107px;
+    margin-left: -528px;
+    outline: none;
+    width: 54%;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 0px 20px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+}
+
+
+.work1
+{
+	background: transparent;
+    border: none;
+    margin-top: 107px;
+    margin-left: -270px;
+    outline: none;
+    width: 54%;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 0px 20px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.work2 
+{
+	background: transparent;
+    border: none;
+    margin-top: 107px;
+    margin-left: -12px;
+    outline: none;
+    width: 54%;
+    color: #fff;
+    background-color: #03a9f4;
+    padding: 0px 18px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+}
+
+
+
+#inline
+{
+	
+    
+    margin-left: 0px;
+    margin-bottom: 17px;
+    height: 90px;
+    
+    color: #fff;
+    border-style: solid;
+    border-color: #03a9f4;
+    display: flex
+    
+	
+}

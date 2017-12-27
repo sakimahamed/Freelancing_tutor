@@ -8,7 +8,7 @@
 	// signup student
 	if (isset($_POST['Signup_as_Student'])) 
 	{
-
+    
 		$Email = $_POST['email'];
 
     session_start();
@@ -137,30 +137,5 @@
       $result = $db->query($query);
        header('location: page3.php');
       }
-      
   	}
-
-
-
-
-
-    // if(isset($_POST['kk'])) 
-    //         {
-    //           $q_id=$_SESSION['q'];
-    //           $mail= $_SESSION['email'];
-              
-    //           $Ans_Description =mysql_real_escape_string($_POST['comment']);
-
-    //           if($Ans_Description==""){
-
-    //           }
-    //           else{
-    //             $q2 = "INSERT INTO answer
-    //                   VALUES('$q_id','','$Ans_Description','','$mail')";
-    //             $result = $db->query($q2);
-    //           }
-    //           header('location: page10.php');
-    //         }
-
-   
 ?>

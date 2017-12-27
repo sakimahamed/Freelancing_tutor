@@ -91,9 +91,12 @@
     while($res){
       echo '
         <div id="inline">
-          <p>Name: '.$res["TFirst_Name"].' '.$res["TLast_Name"].'</p>
-          <p>Email: '.$res["TEmail"].'</p>
-          <p>Contact No: '.$res["TContact_no"].'</p>
+          <p>Name:</p>
+          <p style="color:#03a9f4;">'.$res["TFirst_Name"].' '.$res["TLast_Name"].'&nbsp&nbsp</p>
+          <p>Email:</p>
+          <p style="color:#03a9f4;">'.$res["TEmail"].'&nbsp&nbsp</p>
+          <p>Contact No:</p>
+          <p style="color:#03a9f4;">'.$res["TContact_no"].'&nbsp&nbsp</p>
         </div>
       ';
 

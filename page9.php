@@ -60,8 +60,10 @@
           </select>
           <div class="search">
              <input type="submit" name="src" value="Search">
-
           </div>
+        </form> 
+        <form name="myform" action="page7.php">
+          <input type="submit" value="Back">
         </form>  
       </div>        
     </div>
@@ -93,10 +95,14 @@
           $q_id=$res1["Q_Id"];
           echo '
                 <div id="inline">
-                  <p>Id: '.$res1["Q_Id"].'</p>
-                  <p>Question: '.$res1["Q_Description"].'</p>
-                  <p>Subject: '.$res1["Q_Subject"].'</p>
-                  <p>Email: '.$res1["S_Email"].'</p>
+                  <p>Id:</p>
+                  <p style="color:#03a9f4;">'.$res1["Q_Id"].'&nbsp</p>
+                  <p>Question:</p>
+                  <p style="color:#03a9f4;">'.$res1["Q_Description"].'&nbsp</p>
+                  <p>Subject:</p>
+                  <p style="color:#03a9f4;">'.$res1["Q_Subject"].'&nbsp</p>
+                  <p>Email:</p>
+                  <p style="color:#03a9f4;">'.$res1["S_Email"].'&nbsp</p>
                   <form method="POST" action="page10.php">
                       <button name="ans">Answer</button>
                       <input type="hidden" name = "qid" value='.$q_id.'>

@@ -213,21 +213,20 @@ body{
 }
 
 
-.inputBox input[type="submit"]
+.back input[type="submit"]
 {
-	position: absolute;
-    top: 6%;
-    left: 47%;
+    position: absolute;
+    top: 5%;
+    left: 90%;
     background: transparent;
     border: none;
     outline: none;
     color: #fff;
     background-color: #03a9f4;
-    padding: 6px 20px;
+    padding: 9px 20px;
     cursor: pointer;
     border-radius: 5px;
 }
-
 
 
 .description_Box
@@ -266,7 +265,7 @@ body{
 {
 	position: absolute;
     top: 5%;
-    left: 40%;
+    left: 48%;
     background: transparent;
     border: none;
     outline: none;

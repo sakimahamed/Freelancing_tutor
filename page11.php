@@ -36,12 +36,14 @@
                 <div class="mail">
                   <p>'.$mail.'</p>
                 </div>';
-          ?>           
+          ?>  
+
           </div>               
         </form>
         <form action="login.php">
           <input type="submit" name="" value="SignOut">
         </form>
+
       </div>      
    
       
@@ -61,9 +63,11 @@
               <option>Physics</option>
           </select>
           <div class="search">
-            <input type="submit" name="src" value="Accept" >
+            <input type="submit" name="src" value="Search" >
           </div>
-          
+        </form>
+        <form name="myform" action="page7.php">
+          <input type="submit" value="Back">
         </form>
                   
       </div>        
@@ -102,11 +106,16 @@
         while($res1){
           echo '
                 <div id="inline" >
-                  <p>Id: '.$res1["A_Id"].'</p>
-                  <p>Assignment: '.$res1["A_Description"].'</p>
-                  <p>Subject: '.$res1["A_Subject"].'</p>
-                  <p>Email: '.$res1["S_Email"].'</p>
-                  <p>Dead_Line: '.$res1["A_Dead_Line"].'</p>
+                  <p>Id:</p>
+                  <p style="color:#03a9f4;">'.$res1["A_Id"].'</p>
+                  <p>Project:</p>
+                  <p style="color:#03a9f4;">'.$res1["A_Description"].'</p>
+                  <p>Subject:</p>
+                  <p style="color:#03a9f4;">'.$res1["A_Subject"].'</p>
+                  <p>Email:</p>
+                  <p style="color:#03a9f4;">'.$res1["S_Email"].'</p>
+                  <p>Dead_Line:</p>
+                  <p style="color:#03a9f4;">'.$res1["A_Dead_Line"].'</p>
                   <form method="POST" action="page11.php">
                       <button name="acc">Accept</button>
                       <input type="hidden" name = "accept" value='.$res1["A_Id"].'>

@@ -30,10 +30,30 @@
 
       </div> 
       <form class="rec_qsn">
-      <div>
-        <h4>This software is made for any student who had no helping hand.
-           If anyone want some tutor from any corner of country,he/she can
-          choose his/her desirable tutor. </h4>
+		<h3 style="position: absolute;top: -30px;left: 580px;">Developers</h3>
+      <div class="about1">
+      	<div>
+      		<h6 >Member 1: Shakim Ahamed</h6>
+        	<h6 >Id: 011143066</h6>
+        	<h6 >Department Name: CSE</h6>
+        	<h6 >Database Management System Lab</h6>
+        	<h6 >United International University</h6>	
+      	</div> 
+        
+      </div>
+    	<div class="P2">
+    		
+    	</div>
+      		
+      <div class="about2">
+        <div>
+        	<h6 >Member 2: Miftahul Janant</h6>
+        	<h6 >Id: 011151136</h6>
+        	<h6 >Department Name: CSE</h6>
+        	<h6 >Database Management System Lab</h6>
+        	<h6 >United International University</h6>	
+        </div>
+        
       </div>
     </form>      
     </div>     

@@ -59,9 +59,15 @@
               <option>Accounting</option>
               <option>Physics</option>
           </select>
-          <input type="submit" name="src" value="Search">
+          <div class="search">
+            <input type="submit" name="src" value="Search">
+          </div>
         </form>
-                
+        <form name="myform" action="page7.php">
+          <div class="back">
+            <input type="submit" value="Back">
+          </div>
+        </form>          
       </div>        
     </div>
   
@@ -99,11 +105,16 @@
         while($res1){
           echo '
                 <div id="inline" >
-                  <p>Id: '.$res1["P_Id"].'</p>
-                  <p>Project: '.$res1["P_Description"].'</p>
-                  <p>Subject: '.$res1["P_Subject"].'</p>
-                  <p>Email: '.$res1["S_Email"].'</p>
-                  <p>Dead_Line: '.$res1["P_Dead_Line"].'</p>
+                  <p>Id:</p>
+                  <p style="color:#03a9f4;">'.$res1["P_Id"].'</p>
+                  <p>Project:</p>
+                  <p style="color:#03a9f4;">'.$res1["P_Description"].'</p>
+                  <p>Subject:</p>
+                  <p style="color:#03a9f4;">'.$res1["P_Subject"].'</p>
+                  <p>Email:</p>
+                  <p style="color:#03a9f4;">'.$res1["S_Email"].'</p>
+                  <p>Dead_Line:</p>
+                  <p style="color:#03a9f4;">'.$res1["P_Dead_Line"].'</p>
                   <form method="POST" action="page13.php">
                       <button name="acc1">Accept</button>
                       <input type="hidden" name = "accept" value='.$res1["P_Id"].'>
