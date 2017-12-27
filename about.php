@@ -30,14 +30,10 @@
 
       </div> 
       <form class="rec_qsn">
-		<h3 style="position: absolute;top: -30px;left: 580px;">Developers</h3>
+		<h3 style="position: absolute;top: -30px;left: 595px;">Developers</h3>
       <div class="about1">
       	<div>
-      		<h6 >Member 1: Shakim Ahamed</h6>
-        	<h6 >Id: 011143066</h6>
-        	<h6 >Department Name: CSE</h6>
-        	<h6 >Database Management System Lab</h6>
-        	<h6 >United International University</h6>	
+      		<h5 style="font-size: 21px;">Member 1: Shakim Ahamed<br><br>Id: 011143066<br><br>Department Name: CSE<br><br>Gmail:sahamed143066@bscse.uiu.ac.bd<br><br>Database Management System Lab<br><br>United International University</h5>
       	</div> 
         
       </div>
@@ -47,11 +43,7 @@
       		
       <div class="about2">
         <div>
-        	<h6 >Member 2: Miftahul Janant</h6>
-        	<h6 >Id: 011151136</h6>
-        	<h6 >Department Name: CSE</h6>
-        	<h6 >Database Management System Lab</h6>
-        	<h6 >United International University</h6>	
+        	<h5 style="font-size: 21px;">Member 2: Miftahul Jannat<br><br>Id: 011151136<br><br>Department Name: CSE<br><br>Gmail:mjannat151136@bscse.uiu.ac.bd<br><br>Database Management System Lab<br><br>United International University</h5>	
         </div>
         
       </div>
